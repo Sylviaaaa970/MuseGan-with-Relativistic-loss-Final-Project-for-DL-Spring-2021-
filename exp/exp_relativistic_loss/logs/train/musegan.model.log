@@ -1,0 +1,6 @@
+2021-05-13 18:32:38,489 musegan.model        INFO     Building model.
+2021-05-13 18:32:38,510 musegan.model        INFO     Building training nodes.
+2021-05-13 18:32:43,261 musegan.model        INFO     Building losses.
+2021-05-13 18:32:44,983 musegan.model        INFO     Building training ops.
+2021-05-13 18:33:02,002 musegan.model        INFO     Building summaries.
+2021-05-13 18:33:02,019 musegan.model        INFO     Building prediction nodes.

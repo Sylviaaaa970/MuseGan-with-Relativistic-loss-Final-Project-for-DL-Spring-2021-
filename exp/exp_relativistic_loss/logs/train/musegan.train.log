@@ -1,0 +1,1080 @@
+2021-05-13 18:32:05,419 musegan.train        INFO     Using parameters:
+{'beat_resolution': 12,
+ 'condition_track_idx': None,
+ 'data_shape': [4, 48, 84, 5],
+ 'is_accompaniment': False,
+ 'is_conditional': False,
+ 'latent_dim': 128,
+ 'nets': {'discriminator': 'default', 'generator': 'default'},
+ 'use_binary_neurons': False}
+2021-05-13 18:32:05,422 musegan.train        INFO     Using configurations:
+{'adam': {'beta1': 0.5, 'beta2': 0.9},
+ 'batch_size': 64,
+ 'colormap': [[1.0, 0.0, 0.0],
+              [1.0, 0.5, 0.0],
+              [0.0, 1.0, 0.0],
+              [0.0, 0.0, 1.0],
+              [0.0, 0.5, 1.0]],
+ 'config': './exp/my_experiment//config.yaml',
+ 'data_filename': 'train_x_lpd_5_phr.npz',
+ 'data_source': 'npz',
+ 'eval_dir': '/home/yangx/musegan-main/exp/my_experiment/eval',
+ 'evaluate_steps': 100,
+ 'exp_dir': '/home/yangx/musegan-main/exp/my_experiment',
+ 'gan_loss_type': 'relativistic',
+ 'gpu': '0',
+ 'initial_learning_rate': 0.001,
+ 'learning_rate_schedule': {'end': 50000, 'end_value': 0.0, 'start': 45000},
+ 'log_dir': '/home/yangx/musegan-main/exp/my_experiment/logs/train',
+ 'log_loss_steps': 100,
+ 'midi': {'is_drums': [1, 0, 0, 0, 0],
+          'lowest_pitch': 24,
+          'programs': [0, 0, 25, 33, 48],
+          'tempo': 100},
+ 'model_dir': '/home/yangx/musegan-main/exp/my_experiment/model',
+ 'n_dis_updates_per_gen_update': 5,
+ 'n_jobs': 20,
+ 'params': './exp/my_experiment//params.yaml',
+ 'sample_dir': '/home/yangx/musegan-main/exp/my_experiment/samples',
+ 'sample_grid': [8, 8],
+ 'save_array_samples': True,
+ 'save_checkpoint_steps': 10000,
+ 'save_image_samples': True,
+ 'save_pianoroll_samples': True,
+ 'save_samples_steps': 3000,
+ 'save_summaries_steps': 0,
+ 'slope_schedule': {'end': 50000, 'end_value': 5.0, 'start': 10000},
+ 'src_dir': '/home/yangx/musegan-main/exp/my_experiment/src',
+ 'steps': 50000,
+ 'use_gradient_penalties': True,
+ 'use_learning_rate_decay': True,
+ 'use_random_transpose': False,
+ 'use_slope_annealing': False,
+ 'use_train_test_split': False}
+2021-05-13 18:32:05,422 musegan.train        INFO     Loading training data.
+2021-05-13 18:32:38,282 musegan.train        INFO     Training data size: 102378
+2021-05-13 18:32:38,283 musegan.train        INFO     Building dataset.
+2021-05-13 18:33:02,008 musegan.train        INFO     Number of trainable parameters in Model: 3,943,968
+2021-05-13 18:33:02,011 musegan.train        INFO     Number of trainable parameters in Generator: 2,578,127
+2021-05-13 18:33:02,014 musegan.train        INFO     Number of trainable parameters in Discriminator: 1,365,841
+2021-05-13 18:33:02,014 musegan.train        INFO     Loading sample_z.
+2021-05-13 18:33:02,014 musegan.train        INFO     File for sample_z not found
+2021-05-13 18:33:02,014 musegan.train        INFO     Drawing new sample_z.
+2021-05-13 18:33:04,049 musegan.train        INFO     Training start.
+2021-05-13 18:41:55,994 musegan.train        INFO     step=100, gen_loss= 1.0566E+01, dis_loss= 1.0139E-02
+2021-05-13 18:41:55,995 musegan.train        INFO     Running evaluation
+2021-05-13 18:46:10,084 musegan.train        INFO     step=200, gen_loss= 1.1194E+01, dis_loss= 1.6624E-03
+2021-05-13 18:46:10,085 musegan.train        INFO     Running evaluation
+2021-05-13 18:50:16,200 musegan.train        INFO     step=300, gen_loss= 1.0534E+01, dis_loss= 1.0730E-03
+2021-05-13 18:50:16,201 musegan.train        INFO     Running evaluation
+2021-05-13 18:54:22,373 musegan.train        INFO     step=400, gen_loss= 1.0853E+01, dis_loss= 8.7351E-04
+2021-05-13 18:54:22,374 musegan.train        INFO     Running evaluation
+2021-05-13 18:58:29,228 musegan.train        INFO     step=500, gen_loss= 1.0156E+01, dis_loss= 2.7673E-03
+2021-05-13 18:58:29,229 musegan.train        INFO     Running evaluation
+2021-05-13 19:02:35,267 musegan.train        INFO     step=600, gen_loss= 9.0862E+00, dis_loss= 3.0527E-03
+2021-05-13 19:02:35,269 musegan.train        INFO     Running evaluation
+2021-05-13 19:06:40,975 musegan.train        INFO     step=700, gen_loss= 1.7679E+01, dis_loss= 1.5876E-02
+2021-05-13 19:06:40,976 musegan.train        INFO     Running evaluation
+2021-05-13 19:10:47,084 musegan.train        INFO     step=800, gen_loss= 7.9104E+00, dis_loss= 2.8918E-03
+2021-05-13 19:10:47,085 musegan.train        INFO     Running evaluation
+2021-05-13 19:14:54,299 musegan.train        INFO     step=900, gen_loss= 1.1377E+01, dis_loss= 1.6556E-03
+2021-05-13 19:14:54,300 musegan.train        INFO     Running evaluation
+2021-05-13 19:19:01,512 musegan.train        INFO     step=1000, gen_loss= 6.8732E+00, dis_loss= 1.5376E-02
+2021-05-13 19:19:01,513 musegan.train        INFO     Running evaluation
+2021-05-13 19:23:09,102 musegan.train        INFO     step=1100, gen_loss= 9.0197E+00, dis_loss= 3.6082E-03
+2021-05-13 19:23:09,102 musegan.train        INFO     Running evaluation
+2021-05-13 19:27:16,821 musegan.train        INFO     step=1200, gen_loss= 9.7887E+00, dis_loss= 2.1139E-03
+2021-05-13 19:27:16,821 musegan.train        INFO     Running evaluation
+2021-05-13 19:31:24,963 musegan.train        INFO     step=1300, gen_loss= 8.6526E+00, dis_loss= 2.4980E-03
+2021-05-13 19:31:24,964 musegan.train        INFO     Running evaluation
+2021-05-13 19:35:32,679 musegan.train        INFO     step=1400, gen_loss= 7.8813E+00, dis_loss= 1.2706E-02
+2021-05-13 19:35:32,680 musegan.train        INFO     Running evaluation
+2021-05-13 19:39:40,160 musegan.train        INFO     step=1500, gen_loss= 8.6715E+00, dis_loss= 1.3597E-02
+2021-05-13 19:39:40,161 musegan.train        INFO     Running evaluation
+2021-05-13 19:43:48,408 musegan.train        INFO     step=1600, gen_loss= 8.0360E+00, dis_loss= 6.7583E-03
+2021-05-13 19:43:48,409 musegan.train        INFO     Running evaluation
+2021-05-13 19:47:55,960 musegan.train        INFO     step=1700, gen_loss= 6.9461E+00, dis_loss= 1.3460E-02
+2021-05-13 19:47:55,962 musegan.train        INFO     Running evaluation
+2021-05-13 19:52:04,252 musegan.train        INFO     step=1800, gen_loss= 6.3182E+00, dis_loss= 2.3384E-02
+2021-05-13 19:52:04,253 musegan.train        INFO     Running evaluation
+2021-05-13 19:56:12,364 musegan.train        INFO     step=1900, gen_loss= 7.0156E+00, dis_loss= 2.0423E-02
+2021-05-13 19:56:12,364 musegan.train        INFO     Running evaluation
+2021-05-13 20:00:20,026 musegan.train        INFO     step=2000, gen_loss= 6.6793E+00, dis_loss= 3.5795E-02
+2021-05-13 20:00:20,028 musegan.train        INFO     Running evaluation
+2021-05-13 20:04:28,920 musegan.train        INFO     step=2100, gen_loss= 6.2661E+00, dis_loss= 3.9521E-02
+2021-05-13 20:04:28,921 musegan.train        INFO     Running evaluation
+2021-05-13 20:08:36,205 musegan.train        INFO     step=2200, gen_loss= 6.6273E+00, dis_loss= 2.6048E-02
+2021-05-13 20:08:36,206 musegan.train        INFO     Running evaluation
+2021-05-13 20:12:43,949 musegan.train        INFO     step=2300, gen_loss= 6.7239E+00, dis_loss= 2.7416E-02
+2021-05-13 20:12:43,950 musegan.train        INFO     Running evaluation
+2021-05-13 20:16:51,883 musegan.train        INFO     step=2400, gen_loss= 5.6789E+00, dis_loss= 1.7054E-02
+2021-05-13 20:16:51,883 musegan.train        INFO     Running evaluation
+2021-05-13 20:20:59,097 musegan.train        INFO     step=2500, gen_loss= 5.4564E+00, dis_loss= 5.7976E-02
+2021-05-13 20:20:59,098 musegan.train        INFO     Running evaluation
+2021-05-13 20:25:07,300 musegan.train        INFO     step=2600, gen_loss= 5.4875E+00, dis_loss= 2.5384E-02
+2021-05-13 20:25:07,301 musegan.train        INFO     Running evaluation
+2021-05-13 20:29:15,271 musegan.train        INFO     step=2700, gen_loss= 5.2741E+00, dis_loss= 7.0496E-02
+2021-05-13 20:29:15,272 musegan.train        INFO     Running evaluation
+2021-05-13 20:33:22,894 musegan.train        INFO     step=2800, gen_loss= 4.5415E+00, dis_loss= 4.0186E-02
+2021-05-13 20:33:22,894 musegan.train        INFO     Running evaluation
+2021-05-13 20:37:31,291 musegan.train        INFO     step=2900, gen_loss= 4.3367E+00, dis_loss= 1.0754E-01
+2021-05-13 20:37:31,292 musegan.train        INFO     Running evaluation
+2021-05-13 20:41:39,273 musegan.train        INFO     step=3000, gen_loss= 4.4348E+00, dis_loss= 4.8028E-02
+2021-05-13 20:41:39,274 musegan.train        INFO     Running sampler
+2021-05-13 20:41:58,304 musegan.train        INFO     Running evaluation
+2021-05-13 20:46:05,459 musegan.train        INFO     step=3100, gen_loss= 3.9196E+00, dis_loss= 8.8519E-02
+2021-05-13 20:46:05,460 musegan.train        INFO     Running evaluation
+2021-05-13 20:50:13,853 musegan.train        INFO     step=3200, gen_loss= 3.8001E+00, dis_loss= 8.8166E-02
+2021-05-13 20:50:13,854 musegan.train        INFO     Running evaluation
+2021-05-13 20:54:21,558 musegan.train        INFO     step=3300, gen_loss= 3.4786E+00, dis_loss= 7.9409E-02
+2021-05-13 20:54:21,559 musegan.train        INFO     Running evaluation
+2021-05-13 20:58:29,896 musegan.train        INFO     step=3400, gen_loss= 3.3833E+00, dis_loss= 1.0590E-01
+2021-05-13 20:58:29,898 musegan.train        INFO     Running evaluation
+2021-05-13 21:02:38,052 musegan.train        INFO     step=3500, gen_loss= 4.1342E+00, dis_loss= 1.0083E-01
+2021-05-13 21:02:38,053 musegan.train        INFO     Running evaluation
+2021-05-13 21:06:46,270 musegan.train        INFO     step=3600, gen_loss= 3.2665E+00, dis_loss= 1.0619E-01
+2021-05-13 21:06:46,271 musegan.train        INFO     Running evaluation
+2021-05-13 21:10:55,029 musegan.train        INFO     step=3700, gen_loss= 3.2585E+00, dis_loss= 1.0340E-01
+2021-05-13 21:10:55,030 musegan.train        INFO     Running evaluation
+2021-05-13 21:15:03,008 musegan.train        INFO     step=3800, gen_loss= 3.2264E+00, dis_loss= 8.9990E-02
+2021-05-13 21:15:03,009 musegan.train        INFO     Running evaluation
+2021-05-13 21:19:10,158 musegan.train        INFO     step=3900, gen_loss= 3.2333E+00, dis_loss= 1.0207E-01
+2021-05-13 21:19:10,158 musegan.train        INFO     Running evaluation
+2021-05-13 21:23:19,368 musegan.train        INFO     step=4000, gen_loss= 3.5781E+00, dis_loss= 7.7104E-02
+2021-05-13 21:23:19,369 musegan.train        INFO     Running evaluation
+2021-05-13 21:27:27,989 musegan.train        INFO     step=4100, gen_loss= 3.9022E+00, dis_loss= 1.1727E-01
+2021-05-13 21:27:27,990 musegan.train        INFO     Running evaluation
+2021-05-13 21:31:37,520 musegan.train        INFO     step=4200, gen_loss= 4.2732E+00, dis_loss= 6.4561E-02
+2021-05-13 21:31:37,522 musegan.train        INFO     Running evaluation
+2021-05-13 21:35:46,394 musegan.train        INFO     step=4300, gen_loss= 3.7834E+00, dis_loss= 7.5383E-02
+2021-05-13 21:35:46,396 musegan.train        INFO     Running evaluation
+2021-05-13 21:39:55,429 musegan.train        INFO     step=4400, gen_loss= 4.6389E+00, dis_loss= 7.8015E-02
+2021-05-13 21:39:55,429 musegan.train        INFO     Running evaluation
+2021-05-13 21:44:04,754 musegan.train        INFO     step=4500, gen_loss= 4.2210E+00, dis_loss= 5.4775E-02
+2021-05-13 21:44:04,755 musegan.train        INFO     Running evaluation
+2021-05-13 21:48:13,404 musegan.train        INFO     step=4600, gen_loss= 3.8265E+00, dis_loss= 7.4794E-02
+2021-05-13 21:48:13,406 musegan.train        INFO     Running evaluation
+2021-05-13 21:52:21,837 musegan.train        INFO     step=4700, gen_loss= 4.3562E+00, dis_loss= 9.6373E-02
+2021-05-13 21:52:21,838 musegan.train        INFO     Running evaluation
+2021-05-13 21:56:31,186 musegan.train        INFO     step=4800, gen_loss= 4.4145E+00, dis_loss= 9.7576E-02
+2021-05-13 21:56:31,186 musegan.train        INFO     Running evaluation
+2021-05-13 22:00:39,813 musegan.train        INFO     step=4900, gen_loss= 3.7809E+00, dis_loss= 1.0317E-01
+2021-05-13 22:00:39,814 musegan.train        INFO     Running evaluation
+2021-05-13 22:04:49,030 musegan.train        INFO     step=5000, gen_loss= 4.3173E+00, dis_loss= 1.5768E-01
+2021-05-13 22:04:49,031 musegan.train        INFO     Running evaluation
+2021-05-13 22:08:57,576 musegan.train        INFO     step=5100, gen_loss= 3.5904E+00, dis_loss= 1.5620E-01
+2021-05-13 22:08:57,577 musegan.train        INFO     Running evaluation
+2021-05-13 22:13:05,683 musegan.train        INFO     step=5200, gen_loss= 3.9158E+00, dis_loss= 1.0859E-01
+2021-05-13 22:13:05,684 musegan.train        INFO     Running evaluation
+2021-05-13 22:17:14,953 musegan.train        INFO     step=5300, gen_loss= 4.2559E+00, dis_loss= 5.9218E-02
+2021-05-13 22:17:14,954 musegan.train        INFO     Running evaluation
+2021-05-13 22:21:23,373 musegan.train        INFO     step=5400, gen_loss= 3.5611E+00, dis_loss= 9.8131E-02
+2021-05-13 22:21:23,373 musegan.train        INFO     Running evaluation
+2021-05-13 22:25:32,115 musegan.train        INFO     step=5500, gen_loss= 4.0268E+00, dis_loss= 1.0235E-01
+2021-05-13 22:25:32,116 musegan.train        INFO     Running evaluation
+2021-05-13 22:29:42,155 musegan.train        INFO     step=5600, gen_loss= 3.7373E+00, dis_loss= 1.1334E-01
+2021-05-13 22:29:42,156 musegan.train        INFO     Running evaluation
+2021-05-13 22:33:51,021 musegan.train        INFO     step=5700, gen_loss= 3.6277E+00, dis_loss= 1.0789E-01
+2021-05-13 22:33:51,023 musegan.train        INFO     Running evaluation
+2021-05-13 22:38:00,768 musegan.train        INFO     step=5800, gen_loss= 3.5740E+00, dis_loss= 9.0565E-02
+2021-05-13 22:38:00,769 musegan.train        INFO     Running evaluation
+2021-05-13 22:42:09,184 musegan.train        INFO     step=5900, gen_loss= 4.1076E+00, dis_loss= 1.5984E-01
+2021-05-13 22:42:09,184 musegan.train        INFO     Running evaluation
+2021-05-13 22:46:17,657 musegan.train        INFO     step=6000, gen_loss= 3.5458E+00, dis_loss= 1.1630E-01
+2021-05-13 22:46:17,658 musegan.train        INFO     Running sampler
+2021-05-13 22:46:21,086 musegan.train        INFO     Running evaluation
+2021-05-13 22:50:29,978 musegan.train        INFO     step=6100, gen_loss= 3.6197E+00, dis_loss= 1.0575E-01
+2021-05-13 22:50:29,978 musegan.train        INFO     Running evaluation
+2021-05-13 22:54:38,190 musegan.train        INFO     step=6200, gen_loss= 3.2347E+00, dis_loss= 1.1552E-01
+2021-05-13 22:54:38,191 musegan.train        INFO     Running evaluation
+2021-05-13 22:58:46,743 musegan.train        INFO     step=6300, gen_loss= 3.6082E+00, dis_loss= 1.2386E-01
+2021-05-13 22:58:46,744 musegan.train        INFO     Running evaluation
+2021-05-13 23:02:56,148 musegan.train        INFO     step=6400, gen_loss= 3.9120E+00, dis_loss= 9.0643E-02
+2021-05-13 23:02:56,149 musegan.train        INFO     Running evaluation
+2021-05-13 23:07:04,729 musegan.train        INFO     step=6500, gen_loss= 3.8567E+00, dis_loss= 9.4556E-02
+2021-05-13 23:07:04,730 musegan.train        INFO     Running evaluation
+2021-05-13 23:11:13,259 musegan.train        INFO     step=6600, gen_loss= 3.6886E+00, dis_loss= 7.4406E-02
+2021-05-13 23:11:13,260 musegan.train        INFO     Running evaluation
+2021-05-13 23:15:21,387 musegan.train        INFO     step=6700, gen_loss= 3.7033E+00, dis_loss= 9.2473E-02
+2021-05-13 23:15:21,388 musegan.train        INFO     Running evaluation
+2021-05-13 23:19:30,531 musegan.train        INFO     step=6800, gen_loss= 3.8041E+00, dis_loss= 1.4412E-01
+2021-05-13 23:19:30,532 musegan.train        INFO     Running evaluation
+2021-05-13 23:23:39,880 musegan.train        INFO     step=6900, gen_loss= 3.7670E+00, dis_loss= 1.4501E-01
+2021-05-13 23:23:39,881 musegan.train        INFO     Running evaluation
+2021-05-13 23:27:48,359 musegan.train        INFO     step=7000, gen_loss= 3.6511E+00, dis_loss= 1.1721E-01
+2021-05-13 23:27:48,360 musegan.train        INFO     Running evaluation
+2021-05-13 23:31:57,051 musegan.train        INFO     step=7100, gen_loss= 3.9094E+00, dis_loss= 1.3545E-01
+2021-05-13 23:31:57,052 musegan.train        INFO     Running evaluation
+2021-05-13 23:36:06,383 musegan.train        INFO     step=7200, gen_loss= 3.4215E+00, dis_loss= 1.0963E-01
+2021-05-13 23:36:06,384 musegan.train        INFO     Running evaluation
+2021-05-13 23:40:15,015 musegan.train        INFO     step=7300, gen_loss= 3.7709E+00, dis_loss= 8.6101E-02
+2021-05-13 23:40:15,016 musegan.train        INFO     Running evaluation
+2021-05-13 23:44:24,616 musegan.train        INFO     step=7400, gen_loss= 3.7472E+00, dis_loss= 7.5239E-02
+2021-05-13 23:44:24,616 musegan.train        INFO     Running evaluation
+2021-05-13 23:48:32,977 musegan.train        INFO     step=7500, gen_loss= 3.7368E+00, dis_loss= 8.1101E-02
+2021-05-13 23:48:32,978 musegan.train        INFO     Running evaluation
+2021-05-13 23:52:41,907 musegan.train        INFO     step=7600, gen_loss= 3.8584E+00, dis_loss= 1.2711E-01
+2021-05-13 23:52:41,908 musegan.train        INFO     Running evaluation
+2021-05-13 23:56:51,250 musegan.train        INFO     step=7700, gen_loss= 3.7626E+00, dis_loss= 1.1573E-01
+2021-05-13 23:56:51,250 musegan.train        INFO     Running evaluation
+2021-05-14 00:01:00,111 musegan.train        INFO     step=7800, gen_loss= 3.3041E+00, dis_loss= 1.2942E-01
+2021-05-14 00:01:00,112 musegan.train        INFO     Running evaluation
+2021-05-14 00:05:08,653 musegan.train        INFO     step=7900, gen_loss= 3.6118E+00, dis_loss= 8.0513E-02
+2021-05-14 00:05:08,653 musegan.train        INFO     Running evaluation
+2021-05-14 00:09:16,954 musegan.train        INFO     step=8000, gen_loss= 3.3853E+00, dis_loss= 1.0379E-01
+2021-05-14 00:09:16,955 musegan.train        INFO     Running evaluation
+2021-05-14 00:13:24,905 musegan.train        INFO     step=8100, gen_loss= 3.8338E+00, dis_loss= 8.1386E-02
+2021-05-14 00:13:24,907 musegan.train        INFO     Running evaluation
+2021-05-14 00:17:33,647 musegan.train        INFO     step=8200, gen_loss= 3.4906E+00, dis_loss= 9.3346E-02
+2021-05-14 00:17:33,647 musegan.train        INFO     Running evaluation
+2021-05-14 00:21:41,771 musegan.train        INFO     step=8300, gen_loss= 3.5055E+00, dis_loss= 7.3931E-02
+2021-05-14 00:21:41,771 musegan.train        INFO     Running evaluation
+2021-05-14 00:25:49,259 musegan.train        INFO     step=8400, gen_loss= 3.4835E+00, dis_loss= 1.0559E-01
+2021-05-14 00:25:49,267 musegan.train        INFO     Running evaluation
+2021-05-14 00:29:58,155 musegan.train        INFO     step=8500, gen_loss= 3.5097E+00, dis_loss= 9.7592E-02
+2021-05-14 00:29:58,155 musegan.train        INFO     Running evaluation
+2021-05-14 00:34:06,141 musegan.train        INFO     step=8600, gen_loss= 3.6205E+00, dis_loss= 8.4701E-02
+2021-05-14 00:34:06,142 musegan.train        INFO     Running evaluation
+2021-05-14 00:38:14,213 musegan.train        INFO     step=8700, gen_loss= 3.3705E+00, dis_loss= 1.0454E-01
+2021-05-14 00:38:14,214 musegan.train        INFO     Running evaluation
+2021-05-14 00:42:22,655 musegan.train        INFO     step=8800, gen_loss= 3.7415E+00, dis_loss= 7.4661E-02
+2021-05-14 00:42:22,656 musegan.train        INFO     Running evaluation
+2021-05-14 00:46:30,901 musegan.train        INFO     step=8900, gen_loss= 3.6313E+00, dis_loss= 7.5735E-02
+2021-05-14 00:46:30,902 musegan.train        INFO     Running evaluation
+2021-05-14 00:50:39,876 musegan.train        INFO     step=9000, gen_loss= 3.7467E+00, dis_loss= 6.7178E-02
+2021-05-14 00:50:39,877 musegan.train        INFO     Running sampler
+2021-05-14 00:50:41,285 musegan.train        INFO     Running evaluation
+2021-05-14 00:54:49,284 musegan.train        INFO     step=9100, gen_loss= 3.5674E+00, dis_loss= 7.8631E-02
+2021-05-14 00:54:49,284 musegan.train        INFO     Running evaluation
+2021-05-14 00:58:57,211 musegan.train        INFO     step=9200, gen_loss= 3.7080E+00, dis_loss= 7.0400E-02
+2021-05-14 00:58:57,211 musegan.train        INFO     Running evaluation
+2021-05-14 01:03:06,096 musegan.train        INFO     step=9300, gen_loss= 3.1544E+00, dis_loss= 9.5327E-02
+2021-05-14 01:03:06,097 musegan.train        INFO     Running evaluation
+2021-05-14 01:07:13,237 musegan.train        INFO     step=9400, gen_loss= 3.4323E+00, dis_loss= 9.1422E-02
+2021-05-14 01:07:13,238 musegan.train        INFO     Running evaluation
+2021-05-14 01:11:21,238 musegan.train        INFO     step=9500, gen_loss= 3.4341E+00, dis_loss= 8.7409E-02
+2021-05-14 01:11:21,238 musegan.train        INFO     Running evaluation
+2021-05-14 01:15:30,445 musegan.train        INFO     step=9600, gen_loss= 3.5248E+00, dis_loss= 9.3532E-02
+2021-05-14 01:15:30,446 musegan.train        INFO     Running evaluation
+2021-05-14 01:19:38,298 musegan.train        INFO     step=9700, gen_loss= 3.6075E+00, dis_loss= 9.2163E-02
+2021-05-14 01:19:38,299 musegan.train        INFO     Running evaluation
+2021-05-14 01:23:47,064 musegan.train        INFO     step=9800, gen_loss= 3.4595E+00, dis_loss= 1.0310E-01
+2021-05-14 01:23:47,065 musegan.train        INFO     Running evaluation
+2021-05-14 01:27:55,800 musegan.train        INFO     step=9900, gen_loss= 3.0867E+00, dis_loss= 1.2302E-01
+2021-05-14 01:27:55,800 musegan.train        INFO     Running evaluation
+2021-05-14 01:32:07,388 musegan.train        INFO     step=10000, gen_loss= 3.3522E+00, dis_loss= 9.8955E-02
+2021-05-14 01:32:07,389 musegan.train        INFO     Running evaluation
+2021-05-14 01:36:15,930 musegan.train        INFO     step=10100, gen_loss= 3.3130E+00, dis_loss= 1.0626E-01
+2021-05-14 01:36:15,931 musegan.train        INFO     Running evaluation
+2021-05-14 01:40:23,996 musegan.train        INFO     step=10200, gen_loss= 3.7000E+00, dis_loss= 6.9465E-02
+2021-05-14 01:40:23,996 musegan.train        INFO     Running evaluation
+2021-05-14 01:44:32,026 musegan.train        INFO     step=10300, gen_loss= 3.4423E+00, dis_loss= 8.3606E-02
+2021-05-14 01:44:32,027 musegan.train        INFO     Running evaluation
+2021-05-14 01:48:40,959 musegan.train        INFO     step=10400, gen_loss= 3.5286E+00, dis_loss= 9.2636E-02
+2021-05-14 01:48:40,960 musegan.train        INFO     Running evaluation
+2021-05-14 01:52:49,481 musegan.train        INFO     step=10500, gen_loss= 3.5657E+00, dis_loss= 7.4930E-02
+2021-05-14 01:52:49,481 musegan.train        INFO     Running evaluation
+2021-05-14 01:56:58,291 musegan.train        INFO     step=10600, gen_loss= 3.5551E+00, dis_loss= 9.0748E-02
+2021-05-14 01:56:58,292 musegan.train        INFO     Running evaluation
+2021-05-14 02:01:07,014 musegan.train        INFO     step=10700, gen_loss= 3.5550E+00, dis_loss= 9.4127E-02
+2021-05-14 02:01:07,015 musegan.train        INFO     Running evaluation
+2021-05-14 02:05:14,023 musegan.train        INFO     step=10800, gen_loss= 3.8359E+00, dis_loss= 6.7897E-02
+2021-05-14 02:05:14,023 musegan.train        INFO     Running evaluation
+2021-05-14 02:09:22,615 musegan.train        INFO     step=10900, gen_loss= 3.3495E+00, dis_loss= 8.6515E-02
+2021-05-14 02:09:22,616 musegan.train        INFO     Running evaluation
+2021-05-14 02:13:31,061 musegan.train        INFO     step=11000, gen_loss= 3.6457E+00, dis_loss= 6.1895E-02
+2021-05-14 02:13:31,061 musegan.train        INFO     Running evaluation
+2021-05-14 02:17:39,727 musegan.train        INFO     step=11100, gen_loss= 3.5003E+00, dis_loss= 8.3471E-02
+2021-05-14 02:17:39,728 musegan.train        INFO     Running evaluation
+2021-05-14 02:21:48,637 musegan.train        INFO     step=11200, gen_loss= 3.2185E+00, dis_loss= 1.0595E-01
+2021-05-14 02:21:48,638 musegan.train        INFO     Running evaluation
+2021-05-14 02:25:57,009 musegan.train        INFO     step=11300, gen_loss= 3.5490E+00, dis_loss= 7.6050E-02
+2021-05-14 02:25:57,009 musegan.train        INFO     Running evaluation
+2021-05-14 02:30:05,581 musegan.train        INFO     step=11400, gen_loss= 3.3970E+00, dis_loss= 8.6204E-02
+2021-05-14 02:30:05,581 musegan.train        INFO     Running evaluation
+2021-05-14 02:34:13,929 musegan.train        INFO     step=11500, gen_loss= 3.4094E+00, dis_loss= 9.8478E-02
+2021-05-14 02:34:13,929 musegan.train        INFO     Running evaluation
+2021-05-14 02:38:21,894 musegan.train        INFO     step=11600, gen_loss= 3.5777E+00, dis_loss= 7.9380E-02
+2021-05-14 02:38:21,895 musegan.train        INFO     Running evaluation
+2021-05-14 02:42:30,919 musegan.train        INFO     step=11700, gen_loss= 3.2694E+00, dis_loss= 1.0280E-01
+2021-05-14 02:42:30,920 musegan.train        INFO     Running evaluation
+2021-05-14 02:46:38,629 musegan.train        INFO     step=11800, gen_loss= 3.2880E+00, dis_loss= 1.0448E-01
+2021-05-14 02:46:38,629 musegan.train        INFO     Running evaluation
+2021-05-14 02:50:46,863 musegan.train        INFO     step=11900, gen_loss= 3.4663E+00, dis_loss= 9.4111E-02
+2021-05-14 02:50:46,864 musegan.train        INFO     Running evaluation
+2021-05-14 02:54:56,188 musegan.train        INFO     step=12000, gen_loss= 3.5895E+00, dis_loss= 7.4509E-02
+2021-05-14 02:54:56,188 musegan.train        INFO     Running sampler
+2021-05-14 02:54:57,991 musegan.train        INFO     Running evaluation
+2021-05-14 02:59:05,975 musegan.train        INFO     step=12100, gen_loss= 3.1477E+00, dis_loss= 1.0450E-01
+2021-05-14 02:59:05,976 musegan.train        INFO     Running evaluation
+2021-05-14 03:03:14,403 musegan.train        INFO     step=12200, gen_loss= 3.5828E+00, dis_loss= 7.9000E-02
+2021-05-14 03:03:14,405 musegan.train        INFO     Running evaluation
+2021-05-14 03:07:23,257 musegan.train        INFO     step=12300, gen_loss= 3.5562E+00, dis_loss= 8.9955E-02
+2021-05-14 03:07:23,258 musegan.train        INFO     Running evaluation
+2021-05-14 03:11:31,420 musegan.train        INFO     step=12400, gen_loss= 3.4936E+00, dis_loss= 1.0094E-01
+2021-05-14 03:11:31,421 musegan.train        INFO     Running evaluation
+2021-05-14 03:15:39,790 musegan.train        INFO     step=12500, gen_loss= 3.5324E+00, dis_loss= 8.4373E-02
+2021-05-14 03:15:39,790 musegan.train        INFO     Running evaluation
+2021-05-14 03:19:47,833 musegan.train        INFO     step=12600, gen_loss= 3.5019E+00, dis_loss= 9.6567E-02
+2021-05-14 03:19:47,835 musegan.train        INFO     Running evaluation
+2021-05-14 03:23:56,277 musegan.train        INFO     step=12700, gen_loss= 3.5546E+00, dis_loss= 1.0451E-01
+2021-05-14 03:23:56,278 musegan.train        INFO     Running evaluation
+2021-05-14 03:28:05,501 musegan.train        INFO     step=12800, gen_loss= 3.5922E+00, dis_loss= 9.0750E-02
+2021-05-14 03:28:05,502 musegan.train        INFO     Running evaluation
+2021-05-14 03:32:13,995 musegan.train        INFO     step=12900, gen_loss= 3.4311E+00, dis_loss= 1.0326E-01
+2021-05-14 03:32:13,996 musegan.train        INFO     Running evaluation
+2021-05-14 03:36:22,510 musegan.train        INFO     step=13000, gen_loss= 3.7009E+00, dis_loss= 7.7488E-02
+2021-05-14 03:36:22,510 musegan.train        INFO     Running evaluation
+2021-05-14 03:40:30,489 musegan.train        INFO     step=13100, gen_loss= 3.3834E+00, dis_loss= 9.2088E-02
+2021-05-14 03:40:30,490 musegan.train        INFO     Running evaluation
+2021-05-14 03:44:38,439 musegan.train        INFO     step=13200, gen_loss= 3.4253E+00, dis_loss= 9.9469E-02
+2021-05-14 03:44:38,440 musegan.train        INFO     Running evaluation
+2021-05-14 03:48:48,092 musegan.train        INFO     step=13300, gen_loss= 3.7019E+00, dis_loss= 7.9693E-02
+2021-05-14 03:48:48,092 musegan.train        INFO     Running evaluation
+2021-05-14 03:52:56,284 musegan.train        INFO     step=13400, gen_loss= 3.2904E+00, dis_loss= 9.9159E-02
+2021-05-14 03:52:56,285 musegan.train        INFO     Running evaluation
+2021-05-14 03:57:04,337 musegan.train        INFO     step=13500, gen_loss= 3.2304E+00, dis_loss= 9.4804E-02
+2021-05-14 03:57:04,337 musegan.train        INFO     Running evaluation
+2021-05-14 04:01:11,682 musegan.train        INFO     step=13600, gen_loss= 3.3396E+00, dis_loss= 9.5568E-02
+2021-05-14 04:01:11,682 musegan.train        INFO     Running evaluation
+2021-05-14 04:05:19,912 musegan.train        INFO     step=13700, gen_loss= 3.4486E+00, dis_loss= 9.2046E-02
+2021-05-14 04:05:19,912 musegan.train        INFO     Running evaluation
+2021-05-14 04:09:28,819 musegan.train        INFO     step=13800, gen_loss= 3.3719E+00, dis_loss= 1.0876E-01
+2021-05-14 04:09:28,819 musegan.train        INFO     Running evaluation
+2021-05-14 04:13:36,934 musegan.train        INFO     step=13900, gen_loss= 3.4187E+00, dis_loss= 1.0528E-01
+2021-05-14 04:13:36,935 musegan.train        INFO     Running evaluation
+2021-05-14 04:17:44,583 musegan.train        INFO     step=14000, gen_loss= 3.2272E+00, dis_loss= 1.0796E-01
+2021-05-14 04:17:44,583 musegan.train        INFO     Running evaluation
+2021-05-14 04:21:53,358 musegan.train        INFO     step=14100, gen_loss= 3.2402E+00, dis_loss= 1.0175E-01
+2021-05-14 04:21:53,358 musegan.train        INFO     Running evaluation
+2021-05-14 04:26:01,286 musegan.train        INFO     step=14200, gen_loss= 3.6919E+00, dis_loss= 7.4338E-02
+2021-05-14 04:26:01,288 musegan.train        INFO     Running evaluation
+2021-05-14 04:30:10,614 musegan.train        INFO     step=14300, gen_loss= 3.7527E+00, dis_loss= 7.6015E-02
+2021-05-14 04:30:10,615 musegan.train        INFO     Running evaluation
+2021-05-14 04:34:18,984 musegan.train        INFO     step=14400, gen_loss= 3.0926E+00, dis_loss= 1.1652E-01
+2021-05-14 04:34:18,984 musegan.train        INFO     Running evaluation
+2021-05-14 04:38:27,478 musegan.train        INFO     step=14500, gen_loss= 3.5016E+00, dis_loss= 1.0910E-01
+2021-05-14 04:38:27,478 musegan.train        INFO     Running evaluation
+2021-05-14 04:42:37,028 musegan.train        INFO     step=14600, gen_loss= 3.5979E+00, dis_loss= 7.8777E-02
+2021-05-14 04:42:37,029 musegan.train        INFO     Running evaluation
+2021-05-14 04:46:44,670 musegan.train        INFO     step=14700, gen_loss= 3.5083E+00, dis_loss= 7.8922E-02
+2021-05-14 04:46:44,671 musegan.train        INFO     Running evaluation
+2021-05-14 04:50:52,789 musegan.train        INFO     step=14800, gen_loss= 3.3487E+00, dis_loss= 1.0756E-01
+2021-05-14 04:50:52,790 musegan.train        INFO     Running evaluation
+2021-05-14 04:55:00,534 musegan.train        INFO     step=14900, gen_loss= 3.7856E+00, dis_loss= 7.6735E-02
+2021-05-14 04:55:00,535 musegan.train        INFO     Running evaluation
+2021-05-14 04:59:05,912 musegan.train        INFO     step=15000, gen_loss= 3.5971E+00, dis_loss= 8.5120E-02
+2021-05-14 04:59:05,913 musegan.train        INFO     Running sampler
+2021-05-14 04:59:07,330 musegan.train        INFO     Running evaluation
+2021-05-14 05:03:13,089 musegan.train        INFO     step=15100, gen_loss= 3.4741E+00, dis_loss= 8.2940E-02
+2021-05-14 05:03:13,090 musegan.train        INFO     Running evaluation
+2021-05-14 05:07:18,356 musegan.train        INFO     step=15200, gen_loss= 3.5073E+00, dis_loss= 7.5361E-02
+2021-05-14 05:07:18,356 musegan.train        INFO     Running evaluation
+2021-05-14 05:11:23,923 musegan.train        INFO     step=15300, gen_loss= 3.6141E+00, dis_loss= 7.6189E-02
+2021-05-14 05:11:23,924 musegan.train        INFO     Running evaluation
+2021-05-14 05:15:29,893 musegan.train        INFO     step=15400, gen_loss= 3.5539E+00, dis_loss= 1.1021E-01
+2021-05-14 05:15:29,894 musegan.train        INFO     Running evaluation
+2021-05-14 05:19:35,347 musegan.train        INFO     step=15500, gen_loss= 3.4191E+00, dis_loss= 1.1084E-01
+2021-05-14 05:19:35,348 musegan.train        INFO     Running evaluation
+2021-05-14 05:23:40,700 musegan.train        INFO     step=15600, gen_loss= 3.6439E+00, dis_loss= 8.0476E-02
+2021-05-14 05:23:40,701 musegan.train        INFO     Running evaluation
+2021-05-14 05:27:47,013 musegan.train        INFO     step=15700, gen_loss= 3.5414E+00, dis_loss= 9.7047E-02
+2021-05-14 05:27:47,014 musegan.train        INFO     Running evaluation
+2021-05-14 05:31:52,481 musegan.train        INFO     step=15800, gen_loss= 3.4437E+00, dis_loss= 9.9744E-02
+2021-05-14 05:31:52,482 musegan.train        INFO     Running evaluation
+2021-05-14 05:35:58,525 musegan.train        INFO     step=15900, gen_loss= 3.7544E+00, dis_loss= 8.0890E-02
+2021-05-14 05:35:58,526 musegan.train        INFO     Running evaluation
+2021-05-14 05:40:03,931 musegan.train        INFO     step=16000, gen_loss= 3.6458E+00, dis_loss= 7.3353E-02
+2021-05-14 05:40:03,932 musegan.train        INFO     Running evaluation
+2021-05-14 05:44:09,296 musegan.train        INFO     step=16100, gen_loss= 3.6570E+00, dis_loss= 7.8060E-02
+2021-05-14 05:44:09,297 musegan.train        INFO     Running evaluation
+2021-05-14 05:48:15,169 musegan.train        INFO     step=16200, gen_loss= 3.4022E+00, dis_loss= 9.1014E-02
+2021-05-14 05:48:15,169 musegan.train        INFO     Running evaluation
+2021-05-14 05:52:20,678 musegan.train        INFO     step=16300, gen_loss= 3.4007E+00, dis_loss= 1.1417E-01
+2021-05-14 05:52:20,679 musegan.train        INFO     Running evaluation
+2021-05-14 05:56:26,424 musegan.train        INFO     step=16400, gen_loss= 3.4734E+00, dis_loss= 8.9261E-02
+2021-05-14 05:56:26,425 musegan.train        INFO     Running evaluation
+2021-05-14 06:00:32,329 musegan.train        INFO     step=16500, gen_loss= 3.3045E+00, dis_loss= 1.1794E-01
+2021-05-14 06:00:32,330 musegan.train        INFO     Running evaluation
+2021-05-14 06:04:37,980 musegan.train        INFO     step=16600, gen_loss= 3.5251E+00, dis_loss= 7.3058E-02
+2021-05-14 06:04:37,981 musegan.train        INFO     Running evaluation
+2021-05-14 06:08:43,963 musegan.train        INFO     step=16700, gen_loss= 3.5220E+00, dis_loss= 8.0932E-02
+2021-05-14 06:08:43,964 musegan.train        INFO     Running evaluation
+2021-05-14 06:12:49,352 musegan.train        INFO     step=16800, gen_loss= 3.4669E+00, dis_loss= 8.5450E-02
+2021-05-14 06:12:49,353 musegan.train        INFO     Running evaluation
+2021-05-14 06:16:54,961 musegan.train        INFO     step=16900, gen_loss= 3.2376E+00, dis_loss= 8.7947E-02
+2021-05-14 06:16:54,962 musegan.train        INFO     Running evaluation
+2021-05-14 06:21:01,045 musegan.train        INFO     step=17000, gen_loss= 3.4283E+00, dis_loss= 9.4725E-02
+2021-05-14 06:21:01,046 musegan.train        INFO     Running evaluation
+2021-05-14 06:25:06,497 musegan.train        INFO     step=17100, gen_loss= 3.1915E+00, dis_loss= 1.1685E-01
+2021-05-14 06:25:06,498 musegan.train        INFO     Running evaluation
+2021-05-14 06:29:11,920 musegan.train        INFO     step=17200, gen_loss= 3.5296E+00, dis_loss= 8.6360E-02
+2021-05-14 06:29:11,921 musegan.train        INFO     Running evaluation
+2021-05-14 06:33:17,930 musegan.train        INFO     step=17300, gen_loss= 3.4466E+00, dis_loss= 1.0112E-01
+2021-05-14 06:33:17,931 musegan.train        INFO     Running evaluation
+2021-05-14 06:37:23,550 musegan.train        INFO     step=17400, gen_loss= 3.2373E+00, dis_loss= 1.1374E-01
+2021-05-14 06:37:23,551 musegan.train        INFO     Running evaluation
+2021-05-14 06:41:29,392 musegan.train        INFO     step=17500, gen_loss= 3.5679E+00, dis_loss= 7.4103E-02
+2021-05-14 06:41:29,393 musegan.train        INFO     Running evaluation
+2021-05-14 06:45:34,687 musegan.train        INFO     step=17600, gen_loss= 3.6483E+00, dis_loss= 8.3645E-02
+2021-05-14 06:45:34,688 musegan.train        INFO     Running evaluation
+2021-05-14 06:49:40,288 musegan.train        INFO     step=17700, gen_loss= 3.5139E+00, dis_loss= 8.3233E-02
+2021-05-14 06:49:40,288 musegan.train        INFO     Running evaluation
+2021-05-14 06:53:46,247 musegan.train        INFO     step=17800, gen_loss= 3.6320E+00, dis_loss= 7.7575E-02
+2021-05-14 06:53:46,248 musegan.train        INFO     Running evaluation
+2021-05-14 06:57:51,622 musegan.train        INFO     step=17900, gen_loss= 3.6496E+00, dis_loss= 7.2136E-02
+2021-05-14 06:57:51,623 musegan.train        INFO     Running evaluation
+2021-05-14 07:01:57,016 musegan.train        INFO     step=18000, gen_loss= 3.3314E+00, dis_loss= 9.1486E-02
+2021-05-14 07:01:57,017 musegan.train        INFO     Running sampler
+2021-05-14 07:01:58,374 musegan.train        INFO     Running evaluation
+2021-05-14 07:06:04,233 musegan.train        INFO     step=18100, gen_loss= 3.4862E+00, dis_loss= 1.0773E-01
+2021-05-14 07:06:04,234 musegan.train        INFO     Running evaluation
+2021-05-14 07:10:09,871 musegan.train        INFO     step=18200, gen_loss= 3.2463E+00, dis_loss= 9.4628E-02
+2021-05-14 07:10:09,872 musegan.train        INFO     Running evaluation
+2021-05-14 07:14:15,749 musegan.train        INFO     step=18300, gen_loss= 3.4773E+00, dis_loss= 1.0211E-01
+2021-05-14 07:14:15,750 musegan.train        INFO     Running evaluation
+2021-05-14 07:18:21,035 musegan.train        INFO     step=18400, gen_loss= 3.4642E+00, dis_loss= 9.9608E-02
+2021-05-14 07:18:21,036 musegan.train        INFO     Running evaluation
+2021-05-14 07:22:26,408 musegan.train        INFO     step=18500, gen_loss= 3.3985E+00, dis_loss= 9.6272E-02
+2021-05-14 07:22:26,409 musegan.train        INFO     Running evaluation
+2021-05-14 07:26:32,089 musegan.train        INFO     step=18600, gen_loss= 3.4818E+00, dis_loss= 9.8445E-02
+2021-05-14 07:26:32,090 musegan.train        INFO     Running evaluation
+2021-05-14 07:30:37,621 musegan.train        INFO     step=18700, gen_loss= 3.2193E+00, dis_loss= 1.1209E-01
+2021-05-14 07:30:37,622 musegan.train        INFO     Running evaluation
+2021-05-14 07:34:42,932 musegan.train        INFO     step=18800, gen_loss= 3.4690E+00, dis_loss= 9.0786E-02
+2021-05-14 07:34:42,933 musegan.train        INFO     Running evaluation
+2021-05-14 07:38:49,075 musegan.train        INFO     step=18900, gen_loss= 3.2666E+00, dis_loss= 1.1569E-01
+2021-05-14 07:38:49,076 musegan.train        INFO     Running evaluation
+2021-05-14 07:42:54,760 musegan.train        INFO     step=19000, gen_loss= 3.2615E+00, dis_loss= 9.8543E-02
+2021-05-14 07:42:54,761 musegan.train        INFO     Running evaluation
+2021-05-14 07:47:00,515 musegan.train        INFO     step=19100, gen_loss= 3.3683E+00, dis_loss= 9.6610E-02
+2021-05-14 07:47:00,515 musegan.train        INFO     Running evaluation
+2021-05-14 07:51:05,943 musegan.train        INFO     step=19200, gen_loss= 3.4065E+00, dis_loss= 9.3484E-02
+2021-05-14 07:51:05,944 musegan.train        INFO     Running evaluation
+2021-05-14 07:55:11,324 musegan.train        INFO     step=19300, gen_loss= 3.5981E+00, dis_loss= 7.8109E-02
+2021-05-14 07:55:11,325 musegan.train        INFO     Running evaluation
+2021-05-14 07:59:17,235 musegan.train        INFO     step=19400, gen_loss= 3.5530E+00, dis_loss= 7.3387E-02
+2021-05-14 07:59:17,236 musegan.train        INFO     Running evaluation
+2021-05-14 08:03:22,482 musegan.train        INFO     step=19500, gen_loss= 3.3642E+00, dis_loss= 1.0384E-01
+2021-05-14 08:03:22,483 musegan.train        INFO     Running evaluation
+2021-05-14 08:07:27,999 musegan.train        INFO     step=19600, gen_loss= 3.1425E+00, dis_loss= 1.2282E-01
+2021-05-14 08:07:28,000 musegan.train        INFO     Running evaluation
+2021-05-14 08:11:34,015 musegan.train        INFO     step=19700, gen_loss= 3.6920E+00, dis_loss= 7.8630E-02
+2021-05-14 08:11:34,016 musegan.train        INFO     Running evaluation
+2021-05-14 08:15:39,445 musegan.train        INFO     step=19800, gen_loss= 3.6177E+00, dis_loss= 8.3170E-02
+2021-05-14 08:15:39,446 musegan.train        INFO     Running evaluation
+2021-05-14 08:19:45,447 musegan.train        INFO     step=19900, gen_loss= 3.4889E+00, dis_loss= 9.9621E-02
+2021-05-14 08:19:45,448 musegan.train        INFO     Running evaluation
+2021-05-14 08:23:53,900 musegan.train        INFO     step=20000, gen_loss= 3.5424E+00, dis_loss= 9.3480E-02
+2021-05-14 08:23:53,901 musegan.train        INFO     Running evaluation
+2021-05-14 08:27:59,135 musegan.train        INFO     step=20100, gen_loss= 3.3447E+00, dis_loss= 9.7851E-02
+2021-05-14 08:27:59,136 musegan.train        INFO     Running evaluation
+2021-05-14 08:32:05,099 musegan.train        INFO     step=20200, gen_loss= 3.4652E+00, dis_loss= 8.6805E-02
+2021-05-14 08:32:05,100 musegan.train        INFO     Running evaluation
+2021-05-14 08:36:10,566 musegan.train        INFO     step=20300, gen_loss= 3.6207E+00, dis_loss= 8.9378E-02
+2021-05-14 08:36:10,567 musegan.train        INFO     Running evaluation
+2021-05-14 08:40:16,098 musegan.train        INFO     step=20400, gen_loss= 3.4016E+00, dis_loss= 9.0645E-02
+2021-05-14 08:40:16,098 musegan.train        INFO     Running evaluation
+2021-05-14 08:44:22,187 musegan.train        INFO     step=20500, gen_loss= 3.3523E+00, dis_loss= 9.9576E-02
+2021-05-14 08:44:22,187 musegan.train        INFO     Running evaluation
+2021-05-14 08:48:27,485 musegan.train        INFO     step=20600, gen_loss= 3.5771E+00, dis_loss= 8.2365E-02
+2021-05-14 08:48:27,486 musegan.train        INFO     Running evaluation
+2021-05-14 08:52:33,545 musegan.train        INFO     step=20700, gen_loss= 3.3695E+00, dis_loss= 1.0208E-01
+2021-05-14 08:52:33,546 musegan.train        INFO     Running evaluation
+2021-05-14 08:56:39,219 musegan.train        INFO     step=20800, gen_loss= 3.3867E+00, dis_loss= 8.9233E-02
+2021-05-14 08:56:39,220 musegan.train        INFO     Running evaluation
+2021-05-14 09:00:44,552 musegan.train        INFO     step=20900, gen_loss= 3.4503E+00, dis_loss= 8.7940E-02
+2021-05-14 09:00:44,553 musegan.train        INFO     Running evaluation
+2021-05-14 09:04:50,371 musegan.train        INFO     step=21000, gen_loss= 3.4951E+00, dis_loss= 9.6667E-02
+2021-05-14 09:04:50,372 musegan.train        INFO     Running sampler
+2021-05-14 09:04:51,810 musegan.train        INFO     Running evaluation
+2021-05-14 09:08:57,316 musegan.train        INFO     step=21100, gen_loss= 3.6196E+00, dis_loss= 8.4803E-02
+2021-05-14 09:08:57,317 musegan.train        INFO     Running evaluation
+2021-05-14 09:13:02,666 musegan.train        INFO     step=21200, gen_loss= 3.5788E+00, dis_loss= 8.7331E-02
+2021-05-14 09:13:02,667 musegan.train        INFO     Running evaluation
+2021-05-14 09:17:08,521 musegan.train        INFO     step=21300, gen_loss= 3.4627E+00, dis_loss= 8.6961E-02
+2021-05-14 09:17:08,521 musegan.train        INFO     Running evaluation
+2021-05-14 09:21:13,987 musegan.train        INFO     step=21400, gen_loss= 3.2265E+00, dis_loss= 1.1125E-01
+2021-05-14 09:21:13,987 musegan.train        INFO     Running evaluation
+2021-05-14 09:25:20,020 musegan.train        INFO     step=21500, gen_loss= 3.3988E+00, dis_loss= 8.5956E-02
+2021-05-14 09:25:20,021 musegan.train        INFO     Running evaluation
+2021-05-14 09:29:25,346 musegan.train        INFO     step=21600, gen_loss= 3.6957E+00, dis_loss= 7.0179E-02
+2021-05-14 09:29:25,347 musegan.train        INFO     Running evaluation
+2021-05-14 09:33:30,758 musegan.train        INFO     step=21700, gen_loss= 3.5014E+00, dis_loss= 9.2903E-02
+2021-05-14 09:33:30,759 musegan.train        INFO     Running evaluation
+2021-05-14 09:37:36,487 musegan.train        INFO     step=21800, gen_loss= 3.4863E+00, dis_loss= 9.2530E-02
+2021-05-14 09:37:36,488 musegan.train        INFO     Running evaluation
+2021-05-14 09:41:42,169 musegan.train        INFO     step=21900, gen_loss= 3.6197E+00, dis_loss= 8.2441E-02
+2021-05-14 09:41:42,169 musegan.train        INFO     Running evaluation
+2021-05-14 09:45:47,639 musegan.train        INFO     step=22000, gen_loss= 3.6495E+00, dis_loss= 8.3670E-02
+2021-05-14 09:45:47,640 musegan.train        INFO     Running evaluation
+2021-05-14 09:49:53,534 musegan.train        INFO     step=22100, gen_loss= 3.5000E+00, dis_loss= 8.3179E-02
+2021-05-14 09:49:53,535 musegan.train        INFO     Running evaluation
+2021-05-14 09:53:58,966 musegan.train        INFO     step=22200, gen_loss= 3.6848E+00, dis_loss= 8.4165E-02
+2021-05-14 09:53:58,967 musegan.train        INFO     Running evaluation
+2021-05-14 09:58:04,854 musegan.train        INFO     step=22300, gen_loss= 3.5004E+00, dis_loss= 8.2460E-02
+2021-05-14 09:58:04,855 musegan.train        INFO     Running evaluation
+2021-05-14 10:02:09,274 musegan.train        INFO     step=22400, gen_loss= 3.5551E+00, dis_loss= 8.3235E-02
+2021-05-14 10:02:09,275 musegan.train        INFO     Running evaluation
+2021-05-14 10:06:13,629 musegan.train        INFO     step=22500, gen_loss= 3.6559E+00, dis_loss= 7.3409E-02
+2021-05-14 10:06:13,630 musegan.train        INFO     Running evaluation
+2021-05-14 10:10:18,350 musegan.train        INFO     step=22600, gen_loss= 3.4822E+00, dis_loss= 7.8295E-02
+2021-05-14 10:10:18,351 musegan.train        INFO     Running evaluation
+2021-05-14 10:14:22,723 musegan.train        INFO     step=22700, gen_loss= 3.5952E+00, dis_loss= 7.5454E-02
+2021-05-14 10:14:22,723 musegan.train        INFO     Running evaluation
+2021-05-14 10:18:27,190 musegan.train        INFO     step=22800, gen_loss= 3.4971E+00, dis_loss= 8.0259E-02
+2021-05-14 10:18:27,190 musegan.train        INFO     Running evaluation
+2021-05-14 10:22:31,964 musegan.train        INFO     step=22900, gen_loss= 3.5357E+00, dis_loss= 8.8878E-02
+2021-05-14 10:22:31,964 musegan.train        INFO     Running evaluation
+2021-05-14 10:26:36,317 musegan.train        INFO     step=23000, gen_loss= 3.2737E+00, dis_loss= 1.0476E-01
+2021-05-14 10:26:36,318 musegan.train        INFO     Running evaluation
+2021-05-14 10:30:41,255 musegan.train        INFO     step=23100, gen_loss= 3.3194E+00, dis_loss= 8.9182E-02
+2021-05-14 10:30:41,256 musegan.train        INFO     Running evaluation
+2021-05-14 10:34:45,723 musegan.train        INFO     step=23200, gen_loss= 3.4902E+00, dis_loss= 9.0278E-02
+2021-05-14 10:34:45,724 musegan.train        INFO     Running evaluation
+2021-05-14 10:38:50,191 musegan.train        INFO     step=23300, gen_loss= 3.3527E+00, dis_loss= 1.0255E-01
+2021-05-14 10:38:50,192 musegan.train        INFO     Running evaluation
+2021-05-14 10:42:55,257 musegan.train        INFO     step=23400, gen_loss= 3.4504E+00, dis_loss= 9.7426E-02
+2021-05-14 10:42:55,258 musegan.train        INFO     Running evaluation
+2021-05-14 10:46:59,866 musegan.train        INFO     step=23500, gen_loss= 3.6652E+00, dis_loss= 7.4695E-02
+2021-05-14 10:46:59,867 musegan.train        INFO     Running evaluation
+2021-05-14 10:51:04,300 musegan.train        INFO     step=23600, gen_loss= 3.4711E+00, dis_loss= 8.8695E-02
+2021-05-14 10:51:04,301 musegan.train        INFO     Running evaluation
+2021-05-14 10:55:09,265 musegan.train        INFO     step=23700, gen_loss= 3.4709E+00, dis_loss= 8.6050E-02
+2021-05-14 10:55:09,265 musegan.train        INFO     Running evaluation
+2021-05-14 10:59:13,768 musegan.train        INFO     step=23800, gen_loss= 3.4726E+00, dis_loss= 1.0717E-01
+2021-05-14 10:59:13,769 musegan.train        INFO     Running evaluation
+2021-05-14 11:03:18,776 musegan.train        INFO     step=23900, gen_loss= 3.4666E+00, dis_loss= 9.0145E-02
+2021-05-14 11:03:18,777 musegan.train        INFO     Running evaluation
+2021-05-14 11:07:23,173 musegan.train        INFO     step=24000, gen_loss= 3.4502E+00, dis_loss= 9.3937E-02
+2021-05-14 11:07:23,174 musegan.train        INFO     Running sampler
+2021-05-14 11:07:24,466 musegan.train        INFO     Running evaluation
+2021-05-14 11:11:28,879 musegan.train        INFO     step=24100, gen_loss= 3.4956E+00, dis_loss= 9.0430E-02
+2021-05-14 11:11:28,879 musegan.train        INFO     Running evaluation
+2021-05-14 11:15:33,787 musegan.train        INFO     step=24200, gen_loss= 3.5475E+00, dis_loss= 7.2973E-02
+2021-05-14 11:15:33,787 musegan.train        INFO     Running evaluation
+2021-05-14 11:19:38,248 musegan.train        INFO     step=24300, gen_loss= 3.5074E+00, dis_loss= 1.0436E-01
+2021-05-14 11:19:38,249 musegan.train        INFO     Running evaluation
+2021-05-14 11:23:42,666 musegan.train        INFO     step=24400, gen_loss= 3.5696E+00, dis_loss= 8.8070E-02
+2021-05-14 11:23:42,667 musegan.train        INFO     Running evaluation
+2021-05-14 11:27:47,477 musegan.train        INFO     step=24500, gen_loss= 3.4862E+00, dis_loss= 8.9907E-02
+2021-05-14 11:27:47,478 musegan.train        INFO     Running evaluation
+2021-05-14 11:31:51,810 musegan.train        INFO     step=24600, gen_loss= 3.4373E+00, dis_loss= 9.2948E-02
+2021-05-14 11:31:51,811 musegan.train        INFO     Running evaluation
+2021-05-14 11:35:56,799 musegan.train        INFO     step=24700, gen_loss= 3.7054E+00, dis_loss= 7.7693E-02
+2021-05-14 11:35:56,800 musegan.train        INFO     Running evaluation
+2021-05-14 11:40:01,149 musegan.train        INFO     step=24800, gen_loss= 3.4675E+00, dis_loss= 8.4492E-02
+2021-05-14 11:40:01,150 musegan.train        INFO     Running evaluation
+2021-05-14 11:44:05,643 musegan.train        INFO     step=24900, gen_loss= 3.5660E+00, dis_loss= 8.6421E-02
+2021-05-14 11:44:05,644 musegan.train        INFO     Running evaluation
+2021-05-14 11:48:41,360 musegan.train        INFO     step=25000, gen_loss= 3.6708E+00, dis_loss= 8.2311E-02
+2021-05-14 11:48:41,524 musegan.train        INFO     Running evaluation
+2021-05-14 12:03:03,845 musegan.train        INFO     step=25100, gen_loss= 3.5558E+00, dis_loss= 7.8310E-02
+2021-05-14 12:03:03,907 musegan.train        INFO     Running evaluation
+2021-05-14 12:07:58,592 musegan.train        INFO     step=25200, gen_loss= 3.7291E+00, dis_loss= 6.7464E-02
+2021-05-14 12:07:58,658 musegan.train        INFO     Running evaluation
+2021-05-14 12:13:07,283 musegan.train        INFO     step=25300, gen_loss= 3.6957E+00, dis_loss= 7.9720E-02
+2021-05-14 12:13:07,349 musegan.train        INFO     Running evaluation
+2021-05-14 12:17:17,426 musegan.train        INFO     step=25400, gen_loss= 3.7590E+00, dis_loss= 6.6700E-02
+2021-05-14 12:17:17,466 musegan.train        INFO     Running evaluation
+2021-05-14 12:21:29,712 musegan.train        INFO     step=25500, gen_loss= 3.4355E+00, dis_loss= 8.9236E-02
+2021-05-14 12:21:29,713 musegan.train        INFO     Running evaluation
+2021-05-14 12:25:43,235 musegan.train        INFO     step=25600, gen_loss= 3.1074E+00, dis_loss= 1.0274E-01
+2021-05-14 12:25:43,235 musegan.train        INFO     Running evaluation
+2021-05-14 12:29:53,005 musegan.train        INFO     step=25700, gen_loss= 3.5627E+00, dis_loss= 8.9452E-02
+2021-05-14 12:29:53,006 musegan.train        INFO     Running evaluation
+2021-05-14 12:34:06,374 musegan.train        INFO     step=25800, gen_loss= 3.4629E+00, dis_loss= 1.0433E-01
+2021-05-14 12:34:06,376 musegan.train        INFO     Running evaluation
+2021-05-14 12:38:14,670 musegan.train        INFO     step=25900, gen_loss= 3.5851E+00, dis_loss= 9.0197E-02
+2021-05-14 12:38:14,671 musegan.train        INFO     Running evaluation
+2021-05-14 12:42:23,409 musegan.train        INFO     step=26000, gen_loss= 3.5579E+00, dis_loss= 8.4601E-02
+2021-05-14 12:42:23,458 musegan.train        INFO     Running evaluation
+2021-05-14 12:46:44,165 musegan.train        INFO     step=26100, gen_loss= 3.3381E+00, dis_loss= 8.9083E-02
+2021-05-14 12:46:44,176 musegan.train        INFO     Running evaluation
+2021-05-14 12:51:22,238 musegan.train        INFO     step=26200, gen_loss= 3.7198E+00, dis_loss= 7.9226E-02
+2021-05-14 12:51:22,239 musegan.train        INFO     Running evaluation
+2021-05-14 12:55:44,984 musegan.train        INFO     step=26300, gen_loss= 3.6108E+00, dis_loss= 8.5199E-02
+2021-05-14 12:55:44,985 musegan.train        INFO     Running evaluation
+2021-05-14 13:00:12,351 musegan.train        INFO     step=26400, gen_loss= 3.4556E+00, dis_loss= 9.1747E-02
+2021-05-14 13:00:12,387 musegan.train        INFO     Running evaluation
+2021-05-14 13:05:15,208 musegan.train        INFO     step=26500, gen_loss= 3.5576E+00, dis_loss= 8.8172E-02
+2021-05-14 13:05:15,209 musegan.train        INFO     Running evaluation
+2021-05-14 13:13:41,966 musegan.train        INFO     step=26600, gen_loss= 3.6774E+00, dis_loss= 7.2388E-02
+2021-05-14 13:13:42,033 musegan.train        INFO     Running evaluation
+2021-05-14 13:25:02,681 musegan.train        INFO     step=26700, gen_loss= 3.3923E+00, dis_loss= 1.0685E-01
+2021-05-14 13:25:02,737 musegan.train        INFO     Running evaluation
+2021-05-14 13:36:38,911 musegan.train        INFO     step=26800, gen_loss= 3.4154E+00, dis_loss= 1.2055E-01
+2021-05-14 13:36:38,954 musegan.train        INFO     Running evaluation
+2021-05-14 13:40:47,447 musegan.train        INFO     step=26900, gen_loss= 3.4802E+00, dis_loss= 7.8746E-02
+2021-05-14 13:40:47,448 musegan.train        INFO     Running evaluation
+2021-05-14 13:44:54,340 musegan.train        INFO     step=27000, gen_loss= 3.4496E+00, dis_loss= 7.8579E-02
+2021-05-14 13:44:54,341 musegan.train        INFO     Running sampler
+2021-05-14 13:44:57,109 musegan.train        INFO     Running evaluation
+2021-05-14 13:49:04,729 musegan.train        INFO     step=27100, gen_loss= 3.4552E+00, dis_loss= 9.8556E-02
+2021-05-14 13:49:04,730 musegan.train        INFO     Running evaluation
+2021-05-14 13:53:11,810 musegan.train        INFO     step=27200, gen_loss= 3.3296E+00, dis_loss= 8.2678E-02
+2021-05-14 13:53:11,811 musegan.train        INFO     Running evaluation
+2021-05-14 13:57:18,645 musegan.train        INFO     step=27300, gen_loss= 3.4718E+00, dis_loss= 8.6549E-02
+2021-05-14 13:57:18,646 musegan.train        INFO     Running evaluation
+2021-05-14 14:01:26,705 musegan.train        INFO     step=27400, gen_loss= 3.5155E+00, dis_loss= 7.6841E-02
+2021-05-14 14:01:26,705 musegan.train        INFO     Running evaluation
+2021-05-14 14:05:33,472 musegan.train        INFO     step=27500, gen_loss= 3.3758E+00, dis_loss= 9.8047E-02
+2021-05-14 14:05:33,472 musegan.train        INFO     Running evaluation
+2021-05-14 14:09:40,501 musegan.train        INFO     step=27600, gen_loss= 3.3611E+00, dis_loss= 1.2489E-01
+2021-05-14 14:09:40,502 musegan.train        INFO     Running evaluation
+2021-05-14 14:13:48,462 musegan.train        INFO     step=27700, gen_loss= 3.2757E+00, dis_loss= 1.1133E-01
+2021-05-14 14:13:48,463 musegan.train        INFO     Running evaluation
+2021-05-14 14:17:55,011 musegan.train        INFO     step=27800, gen_loss= 3.4782E+00, dis_loss= 8.5322E-02
+2021-05-14 14:17:55,012 musegan.train        INFO     Running evaluation
+2021-05-14 14:22:02,312 musegan.train        INFO     step=27900, gen_loss= 3.4719E+00, dis_loss= 9.7579E-02
+2021-05-14 14:22:02,313 musegan.train        INFO     Running evaluation
+2021-05-14 14:26:09,239 musegan.train        INFO     step=28000, gen_loss= 3.3464E+00, dis_loss= 1.0496E-01
+2021-05-14 14:26:09,240 musegan.train        INFO     Running evaluation
+2021-05-14 14:30:16,035 musegan.train        INFO     step=28100, gen_loss= 3.8034E+00, dis_loss= 6.5904E-02
+2021-05-14 14:30:16,036 musegan.train        INFO     Running evaluation
+2021-05-14 14:34:23,382 musegan.train        INFO     step=28200, gen_loss= 3.2286E+00, dis_loss= 1.0027E-01
+2021-05-14 14:34:23,383 musegan.train        INFO     Running evaluation
+2021-05-14 14:38:30,337 musegan.train        INFO     step=28300, gen_loss= 3.4790E+00, dis_loss= 1.0027E-01
+2021-05-14 14:38:30,338 musegan.train        INFO     Running evaluation
+2021-05-14 14:42:37,067 musegan.train        INFO     step=28400, gen_loss= 3.5105E+00, dis_loss= 9.0494E-02
+2021-05-14 14:42:37,068 musegan.train        INFO     Running evaluation
+2021-05-14 14:46:44,670 musegan.train        INFO     step=28500, gen_loss= 3.3487E+00, dis_loss= 8.5537E-02
+2021-05-14 14:46:44,670 musegan.train        INFO     Running evaluation
+2021-05-14 14:50:51,492 musegan.train        INFO     step=28600, gen_loss= 3.6375E+00, dis_loss= 8.5734E-02
+2021-05-14 14:50:51,493 musegan.train        INFO     Running evaluation
+2021-05-14 14:54:58,952 musegan.train        INFO     step=28700, gen_loss= 3.7762E+00, dis_loss= 7.3055E-02
+2021-05-14 14:54:58,953 musegan.train        INFO     Running evaluation
+2021-05-14 14:59:06,134 musegan.train        INFO     step=28800, gen_loss= 3.2003E+00, dis_loss= 1.1219E-01
+2021-05-14 14:59:06,135 musegan.train        INFO     Running evaluation
+2021-05-14 15:03:13,251 musegan.train        INFO     step=28900, gen_loss= 3.7128E+00, dis_loss= 7.6417E-02
+2021-05-14 15:03:13,252 musegan.train        INFO     Running evaluation
+2021-05-14 15:07:20,693 musegan.train        INFO     step=29000, gen_loss= 3.2860E+00, dis_loss= 1.2232E-01
+2021-05-14 15:07:20,697 musegan.train        INFO     Running evaluation
+2021-05-14 15:11:27,416 musegan.train        INFO     step=29100, gen_loss= 3.5145E+00, dis_loss= 8.7162E-02
+2021-05-14 15:11:27,416 musegan.train        INFO     Running evaluation
+2021-05-14 15:15:33,955 musegan.train        INFO     step=29200, gen_loss= 3.6132E+00, dis_loss= 8.5826E-02
+2021-05-14 15:15:33,956 musegan.train        INFO     Running evaluation
+2021-05-14 15:19:41,395 musegan.train        INFO     step=29300, gen_loss= 3.4536E+00, dis_loss= 8.7361E-02
+2021-05-14 15:19:41,396 musegan.train        INFO     Running evaluation
+2021-05-14 15:23:48,337 musegan.train        INFO     step=29400, gen_loss= 3.6300E+00, dis_loss= 8.7757E-02
+2021-05-14 15:23:48,338 musegan.train        INFO     Running evaluation
+2021-05-14 15:27:55,262 musegan.train        INFO     step=29500, gen_loss= 3.0837E+00, dis_loss= 1.3259E-01
+2021-05-14 15:27:55,263 musegan.train        INFO     Running evaluation
+2021-05-14 15:32:02,637 musegan.train        INFO     step=29600, gen_loss= 3.5189E+00, dis_loss= 8.4074E-02
+2021-05-14 15:32:02,638 musegan.train        INFO     Running evaluation
+2021-05-14 15:36:09,601 musegan.train        INFO     step=29700, gen_loss= 3.4556E+00, dis_loss= 8.1188E-02
+2021-05-14 15:36:09,602 musegan.train        INFO     Running evaluation
+2021-05-14 15:40:17,191 musegan.train        INFO     step=29800, gen_loss= 3.5039E+00, dis_loss= 8.0131E-02
+2021-05-14 15:40:17,191 musegan.train        INFO     Running evaluation
+2021-05-14 15:44:24,208 musegan.train        INFO     step=29900, gen_loss= 3.5861E+00, dis_loss= 8.1662E-02
+2021-05-14 15:44:24,209 musegan.train        INFO     Running evaluation
+2021-05-14 15:48:38,133 musegan.train        INFO     step=30000, gen_loss= 3.3012E+00, dis_loss= 9.8326E-02
+2021-05-14 15:48:38,134 musegan.train        INFO     Running sampler
+2021-05-14 15:48:39,745 musegan.train        INFO     Running evaluation
+2021-05-14 15:52:47,469 musegan.train        INFO     step=30100, gen_loss= 3.4287E+00, dis_loss= 9.6866E-02
+2021-05-14 15:52:47,469 musegan.train        INFO     Running evaluation
+2021-05-14 15:56:54,255 musegan.train        INFO     step=30200, gen_loss= 3.5892E+00, dis_loss= 8.0522E-02
+2021-05-14 15:56:54,256 musegan.train        INFO     Running evaluation
+2021-05-14 16:01:01,818 musegan.train        INFO     step=30300, gen_loss= 3.4762E+00, dis_loss= 1.0319E-01
+2021-05-14 16:01:01,819 musegan.train        INFO     Running evaluation
+2021-05-14 16:05:08,468 musegan.train        INFO     step=30400, gen_loss= 3.3260E+00, dis_loss= 8.9219E-02
+2021-05-14 16:05:08,469 musegan.train        INFO     Running evaluation
+2021-05-14 16:09:15,195 musegan.train        INFO     step=30500, gen_loss= 3.6437E+00, dis_loss= 7.1439E-02
+2021-05-14 16:09:15,196 musegan.train        INFO     Running evaluation
+2021-05-14 16:13:22,881 musegan.train        INFO     step=30600, gen_loss= 3.6275E+00, dis_loss= 9.3656E-02
+2021-05-14 16:13:22,882 musegan.train        INFO     Running evaluation
+2021-05-14 16:17:29,789 musegan.train        INFO     step=30700, gen_loss= 3.4209E+00, dis_loss= 8.6447E-02
+2021-05-14 16:17:29,790 musegan.train        INFO     Running evaluation
+2021-05-14 16:21:37,556 musegan.train        INFO     step=30800, gen_loss= 3.2946E+00, dis_loss= 1.1143E-01
+2021-05-14 16:21:37,556 musegan.train        INFO     Running evaluation
+2021-05-14 16:25:44,373 musegan.train        INFO     step=30900, gen_loss= 3.6669E+00, dis_loss= 8.6415E-02
+2021-05-14 16:25:44,374 musegan.train        INFO     Running evaluation
+2021-05-14 16:29:51,151 musegan.train        INFO     step=31000, gen_loss= 3.4156E+00, dis_loss= 9.9180E-02
+2021-05-14 16:29:51,152 musegan.train        INFO     Running evaluation
+2021-05-14 16:33:58,717 musegan.train        INFO     step=31100, gen_loss= 3.5235E+00, dis_loss= 9.9750E-02
+2021-05-14 16:33:58,718 musegan.train        INFO     Running evaluation
+2021-05-14 16:38:05,577 musegan.train        INFO     step=31200, gen_loss= 3.2961E+00, dis_loss= 1.0543E-01
+2021-05-14 16:38:05,578 musegan.train        INFO     Running evaluation
+2021-05-14 16:42:12,437 musegan.train        INFO     step=31300, gen_loss= 3.4635E+00, dis_loss= 9.0944E-02
+2021-05-14 16:42:12,438 musegan.train        INFO     Running evaluation
+2021-05-14 16:46:19,797 musegan.train        INFO     step=31400, gen_loss= 3.4249E+00, dis_loss= 9.0771E-02
+2021-05-14 16:46:19,797 musegan.train        INFO     Running evaluation
+2021-05-14 16:50:26,961 musegan.train        INFO     step=31500, gen_loss= 3.5947E+00, dis_loss= 8.1943E-02
+2021-05-14 16:50:26,962 musegan.train        INFO     Running evaluation
+2021-05-14 16:54:34,787 musegan.train        INFO     step=31600, gen_loss= 3.0771E+00, dis_loss= 1.1280E-01
+2021-05-14 16:54:34,787 musegan.train        INFO     Running evaluation
+2021-05-14 16:58:41,411 musegan.train        INFO     step=31700, gen_loss= 3.5059E+00, dis_loss= 8.2475E-02
+2021-05-14 16:58:41,411 musegan.train        INFO     Running evaluation
+2021-05-14 17:02:48,246 musegan.train        INFO     step=31800, gen_loss= 3.3517E+00, dis_loss= 9.6341E-02
+2021-05-14 17:02:48,247 musegan.train        INFO     Running evaluation
+2021-05-14 17:06:55,551 musegan.train        INFO     step=31900, gen_loss= 3.5875E+00, dis_loss= 8.6777E-02
+2021-05-14 17:06:55,552 musegan.train        INFO     Running evaluation
+2021-05-14 17:11:02,486 musegan.train        INFO     step=32000, gen_loss= 3.6329E+00, dis_loss= 7.4443E-02
+2021-05-14 17:11:02,487 musegan.train        INFO     Running evaluation
+2021-05-14 17:15:09,218 musegan.train        INFO     step=32100, gen_loss= 3.3155E+00, dis_loss= 8.4206E-02
+2021-05-14 17:15:09,219 musegan.train        INFO     Running evaluation
+2021-05-14 17:19:16,746 musegan.train        INFO     step=32200, gen_loss= 3.4008E+00, dis_loss= 1.0346E-01
+2021-05-14 17:19:16,746 musegan.train        INFO     Running evaluation
+2021-05-14 17:23:23,484 musegan.train        INFO     step=32300, gen_loss= 3.6283E+00, dis_loss= 8.2465E-02
+2021-05-14 17:23:23,484 musegan.train        INFO     Running evaluation
+2021-05-14 17:27:30,874 musegan.train        INFO     step=32400, gen_loss= 3.5532E+00, dis_loss= 9.0960E-02
+2021-05-14 17:27:30,875 musegan.train        INFO     Running evaluation
+2021-05-14 17:31:37,844 musegan.train        INFO     step=32500, gen_loss= 3.6002E+00, dis_loss= 8.3489E-02
+2021-05-14 17:31:37,844 musegan.train        INFO     Running evaluation
+2021-05-14 17:35:44,781 musegan.train        INFO     step=32600, gen_loss= 3.1952E+00, dis_loss= 1.2426E-01
+2021-05-14 17:35:44,783 musegan.train        INFO     Running evaluation
+2021-05-14 17:39:51,972 musegan.train        INFO     step=32700, gen_loss= 3.3435E+00, dis_loss= 1.0557E-01
+2021-05-14 17:39:51,973 musegan.train        INFO     Running evaluation
+2021-05-14 17:43:58,724 musegan.train        INFO     step=32800, gen_loss= 3.7379E+00, dis_loss= 5.9128E-02
+2021-05-14 17:43:58,725 musegan.train        INFO     Running evaluation
+2021-05-14 17:48:05,793 musegan.train        INFO     step=32900, gen_loss= 3.4050E+00, dis_loss= 9.6464E-02
+2021-05-14 17:48:05,794 musegan.train        INFO     Running evaluation
+2021-05-14 17:52:12,652 musegan.train        INFO     step=33000, gen_loss= 3.4275E+00, dis_loss= 1.0440E-01
+2021-05-14 17:52:12,653 musegan.train        INFO     Running sampler
+2021-05-14 17:52:14,032 musegan.train        INFO     Running evaluation
+2021-05-14 17:56:20,850 musegan.train        INFO     step=33100, gen_loss= 3.6708E+00, dis_loss= 7.1294E-02
+2021-05-14 17:56:20,850 musegan.train        INFO     Running evaluation
+2021-05-14 18:00:28,172 musegan.train        INFO     step=33200, gen_loss= 3.7687E+00, dis_loss= 7.5023E-02
+2021-05-14 18:00:28,173 musegan.train        INFO     Running evaluation
+2021-05-14 18:04:34,923 musegan.train        INFO     step=33300, gen_loss= 3.3214E+00, dis_loss= 9.6437E-02
+2021-05-14 18:04:34,924 musegan.train        INFO     Running evaluation
+2021-05-14 18:08:41,433 musegan.train        INFO     step=33400, gen_loss= 3.3453E+00, dis_loss= 9.6377E-02
+2021-05-14 18:08:41,434 musegan.train        INFO     Running evaluation
+2021-05-14 18:12:48,718 musegan.train        INFO     step=33500, gen_loss= 3.1319E+00, dis_loss= 1.0509E-01
+2021-05-14 18:12:48,718 musegan.train        INFO     Running evaluation
+2021-05-14 18:16:55,667 musegan.train        INFO     step=33600, gen_loss= 3.6434E+00, dis_loss= 9.9442E-02
+2021-05-14 18:16:55,668 musegan.train        INFO     Running evaluation
+2021-05-14 18:21:02,500 musegan.train        INFO     step=33700, gen_loss= 3.4211E+00, dis_loss= 8.9338E-02
+2021-05-14 18:21:02,501 musegan.train        INFO     Running evaluation
+2021-05-14 18:25:10,299 musegan.train        INFO     step=33800, gen_loss= 3.2301E+00, dis_loss= 1.1686E-01
+2021-05-14 18:25:10,300 musegan.train        INFO     Running evaluation
+2021-05-14 18:29:17,298 musegan.train        INFO     step=33900, gen_loss= 3.4929E+00, dis_loss= 9.0471E-02
+2021-05-14 18:29:17,299 musegan.train        INFO     Running evaluation
+2021-05-14 18:33:24,838 musegan.train        INFO     step=34000, gen_loss= 3.4257E+00, dis_loss= 9.0256E-02
+2021-05-14 18:33:24,839 musegan.train        INFO     Running evaluation
+2021-05-14 18:37:32,250 musegan.train        INFO     step=34100, gen_loss= 3.5626E+00, dis_loss= 8.4900E-02
+2021-05-14 18:37:32,251 musegan.train        INFO     Running evaluation
+2021-05-14 18:41:37,912 musegan.train        INFO     step=34200, gen_loss= 3.2459E+00, dis_loss= 1.0500E-01
+2021-05-14 18:41:37,913 musegan.train        INFO     Running evaluation
+2021-05-14 18:45:45,985 musegan.train        INFO     step=34300, gen_loss= 3.6033E+00, dis_loss= 7.6411E-02
+2021-05-14 18:45:45,986 musegan.train        INFO     Running evaluation
+2021-05-14 18:49:53,315 musegan.train        INFO     step=34400, gen_loss= 3.3793E+00, dis_loss= 8.5991E-02
+2021-05-14 18:49:53,316 musegan.train        INFO     Running evaluation
+2021-05-14 18:54:00,159 musegan.train        INFO     step=34500, gen_loss= 3.6848E+00, dis_loss= 7.6151E-02
+2021-05-14 18:54:00,160 musegan.train        INFO     Running evaluation
+2021-05-14 18:58:06,358 musegan.train        INFO     step=34600, gen_loss= 3.8167E+00, dis_loss= 6.2413E-02
+2021-05-14 18:58:06,358 musegan.train        INFO     Running evaluation
+2021-05-14 19:02:13,348 musegan.train        INFO     step=34700, gen_loss= 3.2899E+00, dis_loss= 9.6022E-02
+2021-05-14 19:02:13,349 musegan.train        INFO     Running evaluation
+2021-05-14 19:06:21,137 musegan.train        INFO     step=34800, gen_loss= 3.5268E+00, dis_loss= 9.3890E-02
+2021-05-14 19:06:21,138 musegan.train        INFO     Running evaluation
+2021-05-14 19:10:28,258 musegan.train        INFO     step=34900, gen_loss= 3.7694E+00, dis_loss= 7.7671E-02
+2021-05-14 19:10:28,258 musegan.train        INFO     Running evaluation
+2021-05-14 19:14:35,770 musegan.train        INFO     step=35000, gen_loss= 3.1208E+00, dis_loss= 1.0971E-01
+2021-05-14 19:14:35,771 musegan.train        INFO     Running evaluation
+2021-05-14 19:18:43,477 musegan.train        INFO     step=35100, gen_loss= 3.3250E+00, dis_loss= 1.1100E-01
+2021-05-14 19:18:43,477 musegan.train        INFO     Running evaluation
+2021-05-14 19:22:50,733 musegan.train        INFO     step=35200, gen_loss= 3.7124E+00, dis_loss= 8.9800E-02
+2021-05-14 19:22:50,734 musegan.train        INFO     Running evaluation
+2021-05-14 19:26:58,135 musegan.train        INFO     step=35300, gen_loss= 3.3051E+00, dis_loss= 1.0802E-01
+2021-05-14 19:26:58,136 musegan.train        INFO     Running evaluation
+2021-05-14 19:31:05,994 musegan.train        INFO     step=35400, gen_loss= 3.4028E+00, dis_loss= 8.4265E-02
+2021-05-14 19:31:05,995 musegan.train        INFO     Running evaluation
+2021-05-14 19:35:13,394 musegan.train        INFO     step=35500, gen_loss= 3.4594E+00, dis_loss= 8.5289E-02
+2021-05-14 19:35:13,395 musegan.train        INFO     Running evaluation
+2021-05-14 19:39:21,186 musegan.train        INFO     step=35600, gen_loss= 3.4622E+00, dis_loss= 9.2670E-02
+2021-05-14 19:39:21,187 musegan.train        INFO     Running evaluation
+2021-05-14 19:43:28,472 musegan.train        INFO     step=35700, gen_loss= 3.5984E+00, dis_loss= 7.3262E-02
+2021-05-14 19:43:28,473 musegan.train        INFO     Running evaluation
+2021-05-14 19:47:35,521 musegan.train        INFO     step=35800, gen_loss= 3.6286E+00, dis_loss= 8.9592E-02
+2021-05-14 19:47:35,522 musegan.train        INFO     Running evaluation
+2021-05-14 19:51:43,389 musegan.train        INFO     step=35900, gen_loss= 3.6753E+00, dis_loss= 8.2967E-02
+2021-05-14 19:51:43,390 musegan.train        INFO     Running evaluation
+2021-05-14 19:55:49,669 musegan.train        INFO     step=36000, gen_loss= 3.6747E+00, dis_loss= 7.1811E-02
+2021-05-14 19:55:49,670 musegan.train        INFO     Running sampler
+2021-05-14 19:55:50,951 musegan.train        INFO     Running evaluation
+2021-05-14 19:59:58,139 musegan.train        INFO     step=36100, gen_loss= 3.5799E+00, dis_loss= 8.4379E-02
+2021-05-14 19:59:58,140 musegan.train        INFO     Running evaluation
+2021-05-14 20:04:06,106 musegan.train        INFO     step=36200, gen_loss= 3.4559E+00, dis_loss= 1.0098E-01
+2021-05-14 20:04:06,107 musegan.train        INFO     Running evaluation
+2021-05-14 20:08:13,583 musegan.train        INFO     step=36300, gen_loss= 3.4692E+00, dis_loss= 1.0395E-01
+2021-05-14 20:08:13,583 musegan.train        INFO     Running evaluation
+2021-05-14 20:12:21,395 musegan.train        INFO     step=36400, gen_loss= 3.6470E+00, dis_loss= 8.0785E-02
+2021-05-14 20:12:21,396 musegan.train        INFO     Running evaluation
+2021-05-14 20:16:28,638 musegan.train        INFO     step=36500, gen_loss= 3.3452E+00, dis_loss= 1.0565E-01
+2021-05-14 20:16:28,639 musegan.train        INFO     Running evaluation
+2021-05-14 20:20:35,273 musegan.train        INFO     step=36600, gen_loss= 3.4026E+00, dis_loss= 8.7279E-02
+2021-05-14 20:20:35,274 musegan.train        INFO     Running evaluation
+2021-05-14 20:24:42,976 musegan.train        INFO     step=36700, gen_loss= 3.5013E+00, dis_loss= 8.3366E-02
+2021-05-14 20:24:42,978 musegan.train        INFO     Running evaluation
+2021-05-14 20:28:50,130 musegan.train        INFO     step=36800, gen_loss= 3.4821E+00, dis_loss= 9.1760E-02
+2021-05-14 20:28:50,131 musegan.train        INFO     Running evaluation
+2021-05-14 20:32:57,433 musegan.train        INFO     step=36900, gen_loss= 3.5277E+00, dis_loss= 8.6371E-02
+2021-05-14 20:32:57,433 musegan.train        INFO     Running evaluation
+2021-05-14 20:37:05,426 musegan.train        INFO     step=37000, gen_loss= 3.3880E+00, dis_loss= 9.3897E-02
+2021-05-14 20:37:05,426 musegan.train        INFO     Running evaluation
+2021-05-14 20:41:12,738 musegan.train        INFO     step=37100, gen_loss= 3.6205E+00, dis_loss= 8.1813E-02
+2021-05-14 20:41:12,739 musegan.train        INFO     Running evaluation
+2021-05-14 20:45:20,435 musegan.train        INFO     step=37200, gen_loss= 3.6185E+00, dis_loss= 8.4346E-02
+2021-05-14 20:45:20,436 musegan.train        INFO     Running evaluation
+2021-05-14 20:49:27,551 musegan.train        INFO     step=37300, gen_loss= 3.2096E+00, dis_loss= 1.2575E-01
+2021-05-14 20:49:27,552 musegan.train        INFO     Running evaluation
+2021-05-14 20:53:35,014 musegan.train        INFO     step=37400, gen_loss= 3.6570E+00, dis_loss= 7.0078E-02
+2021-05-14 20:53:35,015 musegan.train        INFO     Running evaluation
+2021-05-14 20:57:42,441 musegan.train        INFO     step=37500, gen_loss= 3.3152E+00, dis_loss= 1.0152E-01
+2021-05-14 20:57:42,442 musegan.train        INFO     Running evaluation
+2021-05-14 21:01:49,748 musegan.train        INFO     step=37600, gen_loss= 3.5350E+00, dis_loss= 7.8701E-02
+2021-05-14 21:01:49,749 musegan.train        INFO     Running evaluation
+2021-05-14 21:05:57,020 musegan.train        INFO     step=37700, gen_loss= 3.5902E+00, dis_loss= 8.3974E-02
+2021-05-14 21:05:57,021 musegan.train        INFO     Running evaluation
+2021-05-14 21:10:05,003 musegan.train        INFO     step=37800, gen_loss= 3.5309E+00, dis_loss= 9.4727E-02
+2021-05-14 21:10:05,004 musegan.train        INFO     Running evaluation
+2021-05-14 21:14:12,236 musegan.train        INFO     step=37900, gen_loss= 3.4775E+00, dis_loss= 9.3787E-02
+2021-05-14 21:14:12,236 musegan.train        INFO     Running evaluation
+2021-05-14 21:18:19,977 musegan.train        INFO     step=38000, gen_loss= 3.4263E+00, dis_loss= 8.5086E-02
+2021-05-14 21:18:19,978 musegan.train        INFO     Running evaluation
+2021-05-14 21:22:26,995 musegan.train        INFO     step=38100, gen_loss= 3.4214E+00, dis_loss= 8.9715E-02
+2021-05-14 21:22:26,996 musegan.train        INFO     Running evaluation
+2021-05-14 21:26:34,365 musegan.train        INFO     step=38200, gen_loss= 3.5567E+00, dis_loss= 8.2499E-02
+2021-05-14 21:26:34,366 musegan.train        INFO     Running evaluation
+2021-05-14 21:30:41,793 musegan.train        INFO     step=38300, gen_loss= 3.3830E+00, dis_loss= 1.0360E-01
+2021-05-14 21:30:41,793 musegan.train        INFO     Running evaluation
+2021-05-14 21:34:49,002 musegan.train        INFO     step=38400, gen_loss= 3.2043E+00, dis_loss= 1.1638E-01
+2021-05-14 21:34:49,003 musegan.train        INFO     Running evaluation
+2021-05-14 21:38:56,148 musegan.train        INFO     step=38500, gen_loss= 3.5547E+00, dis_loss= 8.1177E-02
+2021-05-14 21:38:56,148 musegan.train        INFO     Running evaluation
+2021-05-14 21:43:03,655 musegan.train        INFO     step=38600, gen_loss= 3.4177E+00, dis_loss= 8.0993E-02
+2021-05-14 21:43:03,656 musegan.train        INFO     Running evaluation
+2021-05-14 21:47:11,051 musegan.train        INFO     step=38700, gen_loss= 3.6787E+00, dis_loss= 8.1550E-02
+2021-05-14 21:47:11,052 musegan.train        INFO     Running evaluation
+2021-05-14 21:51:19,082 musegan.train        INFO     step=38800, gen_loss= 3.4733E+00, dis_loss= 1.0343E-01
+2021-05-14 21:51:19,083 musegan.train        INFO     Running evaluation
+2021-05-14 21:55:25,728 musegan.train        INFO     step=38900, gen_loss= 3.9305E+00, dis_loss= 7.0491E-02
+2021-05-14 21:55:25,729 musegan.train        INFO     Running evaluation
+2021-05-14 21:59:33,195 musegan.train        INFO     step=39000, gen_loss= 3.5990E+00, dis_loss= 8.0517E-02
+2021-05-14 21:59:33,195 musegan.train        INFO     Running sampler
+2021-05-14 21:59:34,724 musegan.train        INFO     Running evaluation
+2021-05-14 22:03:42,409 musegan.train        INFO     step=39100, gen_loss= 3.0624E+00, dis_loss= 1.1072E-01
+2021-05-14 22:03:42,410 musegan.train        INFO     Running evaluation
+2021-05-14 22:07:49,715 musegan.train        INFO     step=39200, gen_loss= 3.7516E+00, dis_loss= 6.6469E-02
+2021-05-14 22:07:49,716 musegan.train        INFO     Running evaluation
+2021-05-14 22:11:56,821 musegan.train        INFO     step=39300, gen_loss= 3.1678E+00, dis_loss= 1.2105E-01
+2021-05-14 22:11:56,821 musegan.train        INFO     Running evaluation
+2021-05-14 22:16:04,652 musegan.train        INFO     step=39400, gen_loss= 3.5631E+00, dis_loss= 7.7416E-02
+2021-05-14 22:16:04,652 musegan.train        INFO     Running evaluation
+2021-05-14 22:20:11,700 musegan.train        INFO     step=39500, gen_loss= 3.5581E+00, dis_loss= 8.2175E-02
+2021-05-14 22:20:11,701 musegan.train        INFO     Running evaluation
+2021-05-14 22:24:19,409 musegan.train        INFO     step=39600, gen_loss= 3.5098E+00, dis_loss= 9.0586E-02
+2021-05-14 22:24:19,410 musegan.train        INFO     Running evaluation
+2021-05-14 22:28:26,731 musegan.train        INFO     step=39700, gen_loss= 3.5478E+00, dis_loss= 8.8233E-02
+2021-05-14 22:28:26,732 musegan.train        INFO     Running evaluation
+2021-05-14 22:32:33,854 musegan.train        INFO     step=39800, gen_loss= 3.5910E+00, dis_loss= 9.1940E-02
+2021-05-14 22:32:33,855 musegan.train        INFO     Running evaluation
+2021-05-14 22:36:41,574 musegan.train        INFO     step=39900, gen_loss= 3.1883E+00, dis_loss= 9.5448E-02
+2021-05-14 22:36:41,575 musegan.train        INFO     Running evaluation
+2021-05-14 22:40:51,950 musegan.train        INFO     step=40000, gen_loss= 3.5095E+00, dis_loss= 8.4425E-02
+2021-05-14 22:40:51,951 musegan.train        INFO     Running evaluation
+2021-05-14 22:44:59,024 musegan.train        INFO     step=40100, gen_loss= 3.6822E+00, dis_loss= 8.6239E-02
+2021-05-14 22:44:59,025 musegan.train        INFO     Running evaluation
+2021-05-14 22:49:06,904 musegan.train        INFO     step=40200, gen_loss= 3.6572E+00, dis_loss= 8.4713E-02
+2021-05-14 22:49:06,905 musegan.train        INFO     Running evaluation
+2021-05-14 22:53:14,191 musegan.train        INFO     step=40300, gen_loss= 3.5678E+00, dis_loss= 9.4438E-02
+2021-05-14 22:53:14,192 musegan.train        INFO     Running evaluation
+2021-05-14 22:57:21,718 musegan.train        INFO     step=40400, gen_loss= 3.2632E+00, dis_loss= 1.2438E-01
+2021-05-14 22:57:21,719 musegan.train        INFO     Running evaluation
+2021-05-14 23:01:28,879 musegan.train        INFO     step=40500, gen_loss= 3.4100E+00, dis_loss= 9.5138E-02
+2021-05-14 23:01:28,880 musegan.train        INFO     Running evaluation
+2021-05-14 23:05:36,200 musegan.train        INFO     step=40600, gen_loss= 3.4887E+00, dis_loss= 8.3315E-02
+2021-05-14 23:05:36,200 musegan.train        INFO     Running evaluation
+2021-05-14 23:09:44,146 musegan.train        INFO     step=40700, gen_loss= 3.4757E+00, dis_loss= 1.2517E-01
+2021-05-14 23:09:44,146 musegan.train        INFO     Running evaluation
+2021-05-14 23:13:51,181 musegan.train        INFO     step=40800, gen_loss= 3.6072E+00, dis_loss= 9.1366E-02
+2021-05-14 23:13:51,181 musegan.train        INFO     Running evaluation
+2021-05-14 23:17:58,096 musegan.train        INFO     step=40900, gen_loss= 3.7320E+00, dis_loss= 7.4166E-02
+2021-05-14 23:17:58,097 musegan.train        INFO     Running evaluation
+2021-05-14 23:22:05,749 musegan.train        INFO     step=41000, gen_loss= 3.8105E+00, dis_loss= 7.8483E-02
+2021-05-14 23:22:05,750 musegan.train        INFO     Running evaluation
+2021-05-14 23:26:12,922 musegan.train        INFO     step=41100, gen_loss= 3.3020E+00, dis_loss= 1.0947E-01
+2021-05-14 23:26:12,923 musegan.train        INFO     Running evaluation
+2021-05-14 23:30:20,617 musegan.train        INFO     step=41200, gen_loss= 3.3214E+00, dis_loss= 9.9952E-02
+2021-05-14 23:30:20,618 musegan.train        INFO     Running evaluation
+2021-05-14 23:34:27,920 musegan.train        INFO     step=41300, gen_loss= 3.4459E+00, dis_loss= 7.7632E-02
+2021-05-14 23:34:27,921 musegan.train        INFO     Running evaluation
+2021-05-14 23:38:35,117 musegan.train        INFO     step=41400, gen_loss= 3.5617E+00, dis_loss= 8.7240E-02
+2021-05-14 23:38:35,118 musegan.train        INFO     Running evaluation
+2021-05-14 23:42:42,732 musegan.train        INFO     step=41500, gen_loss= 3.7189E+00, dis_loss= 8.5508E-02
+2021-05-14 23:42:42,732 musegan.train        INFO     Running evaluation
+2021-05-14 23:46:50,032 musegan.train        INFO     step=41600, gen_loss= 3.6596E+00, dis_loss= 6.6356E-02
+2021-05-14 23:46:50,033 musegan.train        INFO     Running evaluation
+2021-05-14 23:50:57,370 musegan.train        INFO     step=41700, gen_loss= 3.4951E+00, dis_loss= 8.8258E-02
+2021-05-14 23:50:57,371 musegan.train        INFO     Running evaluation
+2021-05-14 23:55:04,574 musegan.train        INFO     step=41800, gen_loss= 3.4146E+00, dis_loss= 8.4461E-02
+2021-05-14 23:55:04,575 musegan.train        INFO     Running evaluation
+2021-05-14 23:59:11,689 musegan.train        INFO     step=41900, gen_loss= 3.5088E+00, dis_loss= 8.9725E-02
+2021-05-14 23:59:11,690 musegan.train        INFO     Running evaluation
+2021-05-15 00:03:19,464 musegan.train        INFO     step=42000, gen_loss= 3.6462E+00, dis_loss= 7.4686E-02
+2021-05-15 00:03:19,464 musegan.train        INFO     Running sampler
+2021-05-15 00:03:21,032 musegan.train        INFO     Running evaluation
+2021-05-15 00:07:27,945 musegan.train        INFO     step=42100, gen_loss= 3.3974E+00, dis_loss= 9.0388E-02
+2021-05-15 00:07:27,946 musegan.train        INFO     Running evaluation
+2021-05-15 00:11:35,007 musegan.train        INFO     step=42200, gen_loss= 3.4322E+00, dis_loss= 9.5163E-02
+2021-05-15 00:11:35,008 musegan.train        INFO     Running evaluation
+2021-05-15 00:15:42,965 musegan.train        INFO     step=42300, gen_loss= 3.2504E+00, dis_loss= 9.7027E-02
+2021-05-15 00:15:42,966 musegan.train        INFO     Running evaluation
+2021-05-15 00:19:50,198 musegan.train        INFO     step=42400, gen_loss= 3.5092E+00, dis_loss= 9.7844E-02
+2021-05-15 00:19:50,198 musegan.train        INFO     Running evaluation
+2021-05-15 00:23:58,025 musegan.train        INFO     step=42500, gen_loss= 3.8145E+00, dis_loss= 9.0245E-02
+2021-05-15 00:23:58,025 musegan.train        INFO     Running evaluation
+2021-05-15 00:28:06,280 musegan.train        INFO     step=42600, gen_loss= 3.3182E+00, dis_loss= 9.4414E-02
+2021-05-15 00:28:06,280 musegan.train        INFO     Running evaluation
+2021-05-15 00:32:13,699 musegan.train        INFO     step=42700, gen_loss= 3.4436E+00, dis_loss= 1.0020E-01
+2021-05-15 00:32:13,700 musegan.train        INFO     Running evaluation
+2021-05-15 00:36:21,630 musegan.train        INFO     step=42800, gen_loss= 3.4747E+00, dis_loss= 8.4908E-02
+2021-05-15 00:36:21,630 musegan.train        INFO     Running evaluation
+2021-05-15 00:40:28,950 musegan.train        INFO     step=42900, gen_loss= 3.2031E+00, dis_loss= 9.9179E-02
+2021-05-15 00:40:28,950 musegan.train        INFO     Running evaluation
+2021-05-15 00:44:36,105 musegan.train        INFO     step=43000, gen_loss= 3.7485E+00, dis_loss= 7.7913E-02
+2021-05-15 00:44:36,106 musegan.train        INFO     Running evaluation
+2021-05-15 00:48:43,898 musegan.train        INFO     step=43100, gen_loss= 3.4225E+00, dis_loss= 1.1446E-01
+2021-05-15 00:48:43,898 musegan.train        INFO     Running evaluation
+2021-05-15 00:52:50,348 musegan.train        INFO     step=43200, gen_loss= 3.4605E+00, dis_loss= 9.1642E-02
+2021-05-15 00:52:50,349 musegan.train        INFO     Running evaluation
+2021-05-15 00:56:57,307 musegan.train        INFO     step=43300, gen_loss= 3.3152E+00, dis_loss= 1.0163E-01
+2021-05-15 00:56:57,307 musegan.train        INFO     Running evaluation
+2021-05-15 01:01:05,030 musegan.train        INFO     step=43400, gen_loss= 3.7649E+00, dis_loss= 7.2505E-02
+2021-05-15 01:01:05,031 musegan.train        INFO     Running evaluation
+2021-05-15 01:05:12,477 musegan.train        INFO     step=43500, gen_loss= 3.2838E+00, dis_loss= 1.0736E-01
+2021-05-15 01:05:12,478 musegan.train        INFO     Running evaluation
+2021-05-15 01:09:20,407 musegan.train        INFO     step=43600, gen_loss= 3.6048E+00, dis_loss= 9.0613E-02
+2021-05-15 01:09:20,407 musegan.train        INFO     Running evaluation
+2021-05-15 01:13:28,386 musegan.train        INFO     step=43700, gen_loss= 3.4881E+00, dis_loss= 8.3207E-02
+2021-05-15 01:13:28,387 musegan.train        INFO     Running evaluation
+2021-05-15 01:17:35,710 musegan.train        INFO     step=43800, gen_loss= 3.1956E+00, dis_loss= 1.0715E-01
+2021-05-15 01:17:35,711 musegan.train        INFO     Running evaluation
+2021-05-15 01:21:43,074 musegan.train        INFO     step=43900, gen_loss= 3.2521E+00, dis_loss= 1.0607E-01
+2021-05-15 01:21:43,074 musegan.train        INFO     Running evaluation
+2021-05-15 01:25:50,290 musegan.train        INFO     step=44000, gen_loss= 3.5229E+00, dis_loss= 8.9538E-02
+2021-05-15 01:25:50,290 musegan.train        INFO     Running evaluation
+2021-05-15 01:29:57,328 musegan.train        INFO     step=44100, gen_loss= 3.6023E+00, dis_loss= 8.3068E-02
+2021-05-15 01:29:57,329 musegan.train        INFO     Running evaluation
+2021-05-15 01:34:04,681 musegan.train        INFO     step=44200, gen_loss= 3.5064E+00, dis_loss= 9.7876E-02
+2021-05-15 01:34:04,682 musegan.train        INFO     Running evaluation
+2021-05-15 01:38:11,804 musegan.train        INFO     step=44300, gen_loss= 3.6799E+00, dis_loss= 7.5722E-02
+2021-05-15 01:38:11,805 musegan.train        INFO     Running evaluation
+2021-05-15 01:42:19,037 musegan.train        INFO     step=44400, gen_loss= 3.5786E+00, dis_loss= 8.8961E-02
+2021-05-15 01:42:19,038 musegan.train        INFO     Running evaluation
+2021-05-15 01:46:25,949 musegan.train        INFO     step=44500, gen_loss= 3.7149E+00, dis_loss= 7.4167E-02
+2021-05-15 01:46:25,950 musegan.train        INFO     Running evaluation
+2021-05-15 01:50:32,346 musegan.train        INFO     step=44600, gen_loss= 3.4790E+00, dis_loss= 8.5791E-02
+2021-05-15 01:50:32,347 musegan.train        INFO     Running evaluation
+2021-05-15 01:54:39,962 musegan.train        INFO     step=44700, gen_loss= 3.5829E+00, dis_loss= 7.7471E-02
+2021-05-15 01:54:39,962 musegan.train        INFO     Running evaluation
+2021-05-15 01:58:46,841 musegan.train        INFO     step=44800, gen_loss= 3.5247E+00, dis_loss= 7.8578E-02
+2021-05-15 01:58:46,842 musegan.train        INFO     Running evaluation
+2021-05-15 02:02:53,559 musegan.train        INFO     step=44900, gen_loss= 3.4217E+00, dis_loss= 7.8256E-02
+2021-05-15 02:02:53,560 musegan.train        INFO     Running evaluation
+2021-05-15 02:07:00,823 musegan.train        INFO     step=45000, gen_loss= 3.7439E+00, dis_loss= 7.6577E-02
+2021-05-15 02:07:00,823 musegan.train        INFO     Running sampler
+2021-05-15 02:07:02,284 musegan.train        INFO     Running evaluation
+2021-05-15 02:11:09,360 musegan.train        INFO     step=45100, gen_loss= 3.3360E+00, dis_loss= 9.6294E-02
+2021-05-15 02:11:09,360 musegan.train        INFO     Running evaluation
+2021-05-15 02:15:16,860 musegan.train        INFO     step=45200, gen_loss= 3.6259E+00, dis_loss= 8.2125E-02
+2021-05-15 02:15:16,860 musegan.train        INFO     Running evaluation
+2021-05-15 02:19:24,050 musegan.train        INFO     step=45300, gen_loss= 3.5767E+00, dis_loss= 8.3016E-02
+2021-05-15 02:19:24,051 musegan.train        INFO     Running evaluation
+2021-05-15 02:23:30,924 musegan.train        INFO     step=45400, gen_loss= 3.5424E+00, dis_loss= 7.9636E-02
+2021-05-15 02:23:30,925 musegan.train        INFO     Running evaluation
+2021-05-15 02:27:38,322 musegan.train        INFO     step=45500, gen_loss= 3.3946E+00, dis_loss= 1.1270E-01
+2021-05-15 02:27:38,322 musegan.train        INFO     Running evaluation
+2021-05-15 02:31:45,121 musegan.train        INFO     step=45600, gen_loss= 3.2584E+00, dis_loss= 1.0266E-01
+2021-05-15 02:31:45,122 musegan.train        INFO     Running evaluation
+2021-05-15 02:35:52,074 musegan.train        INFO     step=45700, gen_loss= 3.5154E+00, dis_loss= 9.0564E-02
+2021-05-15 02:35:52,075 musegan.train        INFO     Running evaluation
+2021-05-15 02:39:59,506 musegan.train        INFO     step=45800, gen_loss= 3.4125E+00, dis_loss= 8.7226E-02
+2021-05-15 02:39:59,521 musegan.train        INFO     Running evaluation
+2021-05-15 02:44:06,343 musegan.train        INFO     step=45900, gen_loss= 3.6191E+00, dis_loss= 6.9725E-02
+2021-05-15 02:44:06,344 musegan.train        INFO     Running evaluation
+2021-05-15 02:48:13,331 musegan.train        INFO     step=46000, gen_loss= 3.2775E+00, dis_loss= 1.0995E-01
+2021-05-15 02:48:13,331 musegan.train        INFO     Running evaluation
+2021-05-15 02:52:20,446 musegan.train        INFO     step=46100, gen_loss= 3.3200E+00, dis_loss= 1.0256E-01
+2021-05-15 02:52:20,447 musegan.train        INFO     Running evaluation
+2021-05-15 02:56:27,414 musegan.train        INFO     step=46200, gen_loss= 3.6233E+00, dis_loss= 6.5909E-02
+2021-05-15 02:56:27,415 musegan.train        INFO     Running evaluation
+2021-05-15 03:00:34,763 musegan.train        INFO     step=46300, gen_loss= 3.5893E+00, dis_loss= 7.4511E-02
+2021-05-15 03:00:34,763 musegan.train        INFO     Running evaluation
+2021-05-15 03:04:41,932 musegan.train        INFO     step=46400, gen_loss= 3.1720E+00, dis_loss= 1.0403E-01
+2021-05-15 03:04:41,933 musegan.train        INFO     Running evaluation
+2021-05-15 03:08:49,052 musegan.train        INFO     step=46500, gen_loss= 3.6978E+00, dis_loss= 6.9586E-02
+2021-05-15 03:08:49,052 musegan.train        INFO     Running evaluation
+2021-05-15 03:12:56,650 musegan.train        INFO     step=46600, gen_loss= 3.4307E+00, dis_loss= 9.7101E-02
+2021-05-15 03:12:56,650 musegan.train        INFO     Running evaluation
+2021-05-15 03:17:03,414 musegan.train        INFO     step=46700, gen_loss= 3.4727E+00, dis_loss= 9.3076E-02
+2021-05-15 03:17:03,415 musegan.train        INFO     Running evaluation
+2021-05-15 03:21:11,155 musegan.train        INFO     step=46800, gen_loss= 3.5153E+00, dis_loss= 9.9612E-02
+2021-05-15 03:21:11,156 musegan.train        INFO     Running evaluation
+2021-05-15 03:25:17,931 musegan.train        INFO     step=46900, gen_loss= 3.6519E+00, dis_loss= 7.9966E-02
+2021-05-15 03:25:17,932 musegan.train        INFO     Running evaluation
+2021-05-15 03:29:24,906 musegan.train        INFO     step=47000, gen_loss= 3.5453E+00, dis_loss= 8.5047E-02
+2021-05-15 03:29:24,907 musegan.train        INFO     Running evaluation
+2021-05-15 03:33:32,934 musegan.train        INFO     step=47100, gen_loss= 3.5472E+00, dis_loss= 7.2850E-02
+2021-05-15 03:33:32,935 musegan.train        INFO     Running evaluation
+2021-05-15 03:37:39,465 musegan.train        INFO     step=47200, gen_loss= 3.7035E+00, dis_loss= 8.5996E-02
+2021-05-15 03:37:39,466 musegan.train        INFO     Running evaluation
+2021-05-15 03:41:45,899 musegan.train        INFO     step=47300, gen_loss= 3.4923E+00, dis_loss= 8.9454E-02
+2021-05-15 03:41:45,902 musegan.train        INFO     Running evaluation
+2021-05-15 03:45:53,067 musegan.train        INFO     step=47400, gen_loss= 3.6701E+00, dis_loss= 7.8009E-02
+2021-05-15 03:45:53,068 musegan.train        INFO     Running evaluation
+2021-05-15 03:50:00,151 musegan.train        INFO     step=47500, gen_loss= 3.2909E+00, dis_loss= 9.5600E-02
+2021-05-15 03:50:00,152 musegan.train        INFO     Running evaluation
+2021-05-15 03:54:07,824 musegan.train        INFO     step=47600, gen_loss= 3.5452E+00, dis_loss= 8.1470E-02
+2021-05-15 03:54:07,825 musegan.train        INFO     Running evaluation
+2021-05-15 03:58:14,675 musegan.train        INFO     step=47700, gen_loss= 3.4235E+00, dis_loss= 1.0384E-01
+2021-05-15 03:58:14,676 musegan.train        INFO     Running evaluation
+2021-05-15 04:02:21,920 musegan.train        INFO     step=47800, gen_loss= 3.6035E+00, dis_loss= 9.2004E-02
+2021-05-15 04:02:21,920 musegan.train        INFO     Running evaluation
+2021-05-15 04:06:29,437 musegan.train        INFO     step=47900, gen_loss= 3.8657E+00, dis_loss= 7.7905E-02
+2021-05-15 04:06:29,438 musegan.train        INFO     Running evaluation
+2021-05-15 04:10:36,474 musegan.train        INFO     step=48000, gen_loss= 3.5792E+00, dis_loss= 7.4079E-02
+2021-05-15 04:10:36,475 musegan.train        INFO     Running sampler
+2021-05-15 04:10:38,004 musegan.train        INFO     Running evaluation
+2021-05-15 04:14:45,679 musegan.train        INFO     step=48100, gen_loss= 3.3140E+00, dis_loss= 1.2274E-01
+2021-05-15 04:14:45,680 musegan.train        INFO     Running evaluation
+2021-05-15 04:18:52,594 musegan.train        INFO     step=48200, gen_loss= 3.4151E+00, dis_loss= 9.6922E-02
+2021-05-15 04:18:52,594 musegan.train        INFO     Running evaluation
+2021-05-15 04:22:59,606 musegan.train        INFO     step=48300, gen_loss= 3.4691E+00, dis_loss= 9.8325E-02
+2021-05-15 04:22:59,607 musegan.train        INFO     Running evaluation
+2021-05-15 04:27:07,352 musegan.train        INFO     step=48400, gen_loss= 3.2879E+00, dis_loss= 9.6585E-02
+2021-05-15 04:27:07,353 musegan.train        INFO     Running evaluation
+2021-05-15 04:31:14,240 musegan.train        INFO     step=48500, gen_loss= 3.4617E+00, dis_loss= 9.4807E-02
+2021-05-15 04:31:14,240 musegan.train        INFO     Running evaluation
+2021-05-15 04:35:21,334 musegan.train        INFO     step=48600, gen_loss= 3.4629E+00, dis_loss= 8.5091E-02
+2021-05-15 04:35:21,335 musegan.train        INFO     Running evaluation
+2021-05-15 04:39:28,223 musegan.train        INFO     step=48700, gen_loss= 3.5871E+00, dis_loss= 8.1225E-02
+2021-05-15 04:39:28,224 musegan.train        INFO     Running evaluation
+2021-05-15 04:43:35,248 musegan.train        INFO     step=48800, gen_loss= 3.4902E+00, dis_loss= 8.1322E-02
+2021-05-15 04:43:35,248 musegan.train        INFO     Running evaluation
+2021-05-15 04:47:42,661 musegan.train        INFO     step=48900, gen_loss= 3.4317E+00, dis_loss= 9.1511E-02
+2021-05-15 04:47:42,662 musegan.train        INFO     Running evaluation
+2021-05-15 04:51:49,691 musegan.train        INFO     step=49000, gen_loss= 3.6017E+00, dis_loss= 8.0770E-02
+2021-05-15 04:51:49,692 musegan.train        INFO     Running evaluation
+2021-05-15 04:55:56,541 musegan.train        INFO     step=49100, gen_loss= 3.3717E+00, dis_loss= 9.6425E-02
+2021-05-15 04:55:56,542 musegan.train        INFO     Running evaluation
+2021-05-15 05:00:03,968 musegan.train        INFO     step=49200, gen_loss= 3.7510E+00, dis_loss= 7.2944E-02
+2021-05-15 05:00:03,969 musegan.train        INFO     Running evaluation
+2021-05-15 05:04:11,213 musegan.train        INFO     step=49300, gen_loss= 3.7136E+00, dis_loss= 6.9493E-02
+2021-05-15 05:04:11,213 musegan.train        INFO     Running evaluation
+2021-05-15 05:08:17,946 musegan.train        INFO     step=49400, gen_loss= 3.3665E+00, dis_loss= 1.0975E-01
+2021-05-15 05:08:17,946 musegan.train        INFO     Running evaluation
+2021-05-15 05:12:25,542 musegan.train        INFO     step=49500, gen_loss= 3.4693E+00, dis_loss= 9.0417E-02
+2021-05-15 05:12:25,543 musegan.train        INFO     Running evaluation
+2021-05-15 05:16:32,494 musegan.train        INFO     step=49600, gen_loss= 3.7520E+00, dis_loss= 7.9805E-02
+2021-05-15 05:16:32,494 musegan.train        INFO     Running evaluation
+2021-05-15 05:20:40,238 musegan.train        INFO     step=49700, gen_loss= 3.3612E+00, dis_loss= 1.1301E-01
+2021-05-15 05:20:40,238 musegan.train        INFO     Running evaluation
+2021-05-15 05:24:47,070 musegan.train        INFO     step=49800, gen_loss= 3.3170E+00, dis_loss= 8.6764E-02
+2021-05-15 05:24:47,071 musegan.train        INFO     Running evaluation
+2021-05-15 05:28:53,870 musegan.train        INFO     step=49900, gen_loss= 3.9328E+00, dis_loss= 6.3938E-02
+2021-05-15 05:28:53,871 musegan.train        INFO     Running evaluation
+2021-05-15 05:33:03,970 musegan.train        INFO     step=50000, gen_loss= 3.5471E+00, dis_loss= 1.0613E-01
+2021-05-15 05:33:03,971 musegan.train        INFO     Running evaluation
+2021-05-15 05:33:15,182 musegan.train        INFO     Training end
