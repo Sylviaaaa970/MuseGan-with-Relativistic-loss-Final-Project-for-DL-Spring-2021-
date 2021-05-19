@@ -1,18 +1,14 @@
-# Introduction
+## Introduction
+In this project we want to train a model with music composed by human musicians and generate new fragments of music with such a pre-trained model. Ideally, this fragment should be composed of multi-track instruments and form a rich enough, long enough melody and gain high score in user study .
 
-We train the model with training data collected from
+In the base of [MuseGAN](https://salu133445.github.io/musegan/), we try a new loss function: [Relativistic loss](https://arxiv.org/abs/1807.00734) and get better performance.  
+
+The training data is collected from
 [Lakh Pianoroll Dataset](https://salu133445.github.io/lakh-pianoroll-dataset/)
 to generate pop song phrases consisting of bass, drums, guitar, piano and
 strings tracks.
 
 Sample results are available in folder result.
-
-# Reference
-
-[MuseGAN](https://salu133445.github.io/musegan/) is a project on music
-generation. In a nutshell, we aim to generate polyphonic music of multiple
-tracks (instruments). The proposed models are able to generate music either from
-scratch, or by accompanying a track given a priori by the user.
 
 ## Prerequisites
 
